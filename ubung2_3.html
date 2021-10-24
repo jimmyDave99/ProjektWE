@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        body{
+            font-family: 'Open Sans', sans-serif;
+            background-color: #b2d6d1;
+        }
+        .div1{
+            height: 650px;
+            width: 90%;
+            background-color: #FFF;
+            margin: auto;
+
+        }
+        h1,p{
+            text-align: center;
+        }
+        table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .sp{
+            text-align: right;
+        }
+        .cl{
+            padding: 8px;
+            width: 300px;
+        }
+        .cl1{
+            padding: 8px;
+            width: 150px;
+        }
+        #ver{
+            vertical-align: top;
+        }
+    </style>
+    <title>Übung2.3</title>
+</head>
+<body>
+<h1>Survey Form</h1>
+<div class="div1">
+    <br>
+    <p> Let us know how we can improve freeCodeCamp</p>
+    <table cellspacing= 15px>
+        <tr>
+            <td class="sp"><label  for="nm">* Name:</label></td>
+            <td><input class="cl" type="text" placeholder="Enter your name" id="xd"/> </td>
+
+        </tr>
+
+        <tr>
+            <td class="sp"><label for="em">* Email:</label></td>
+            <td><input class="cl" type="email" placeholder="Enter your Email" id="em"/></td>
+        </tr>
+        <br>
+        <tr>
+            <td class="sp"> <label for="ag">* Age:</label></td>
+            <td > <input class="cl" type="number" placeholder="Age" id="ag"/></td>
+        </tr>
+        <tr>
+            <td class="sp" id="ver">Which option best describes your current role?</td>
+            <td>
+                <select class="cl1" name="role" id="role">
+                    <option  value="Student">Student</option>
+                    <option value="Schuler">Schuler</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="sp" id="ver">* How likely is that you would recommend <br> freeCodeCamp to a freind? </td>
+            <td > <input  type="radio" name="reco" id="fc"/>
+                <label for="fc">Definitely</label><br>
+                <input type="radio" name="reco" id="fc"/>
+                <label for="fc">Maybe</label><br>
+                <input type="radio" name="reco" id="fc"/>
+                <label for="fc">Not sure</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="sp" id="ver"> <label for="fcc">What do you like most in FCC: </label></td>
+            <td>  <select class="cl1" name="fcc" id="role">
+                <option class="cl1" value="op">Selelect an option</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="sp" id="ver">Things that schould be improved in the future <br>(Check all that apply)</td>
+            <td><input type="checkbox" id="ft"/>
+                <label for="ft">Front-end Projects</label><br>
+                <input type="checkbox" id="ft"/>
+                <label for="ft">Back-end Projects</label><br>
+                <input type="checkbox" id="ft"/>
+                <label for="ft">Data visualization</label></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
