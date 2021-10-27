@@ -61,15 +61,24 @@ article{
     margin: 0px;
     height: 500px;
     grid-template-columns: 25% 25% 25% 25%;
-    background-color: #b2d6d1;
+    background-color: #bcecd4;
 }
-article ul{
+/*.ubung3{
     grid-column-start: 1;
+    background-color: magenta;
+}*/
 
-}
 .table{
     display: table;
     margin: 0 auto;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.table2{
+    display: table;
+    margin: 0 auto;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 .menu-ind:hover, .article-ubung2_1:hover{
     border-top: 5px solid #4c8;
@@ -83,15 +92,15 @@ article ul{
     border-top: 5px solid #0070BB;
     background-color: RGBa(000, 112, 192, 0.15);
 }
-.menu-js:hover{
+.menu-js:hover,.article-ubung3_1:hover{
     border-top: 5px solid #e44d26;
     background-color: RGBa(228, 77, 38, 0.15);
 }
-.menu-php:hover{
+.menu-php:hover, .article-ubung3_2:hover{
     border-top: 5px solid #4c8;
     background-color: RGBa(64, 200, 130, 0.15);
 }
-.menu-ubung:hover{
+.menu-ubung:hover,.article-ubung3_3:hover{
     border-top: 5px solid #f1dc4f;
     background-color: RGBa(000, 112, 192, 0.15);
 }

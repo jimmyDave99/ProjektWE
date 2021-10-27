@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="10cd8ab4-644a-4b3a-9528-61745f9299c3" name="jziwo2s@www2.inf.h-brs.de">
+        <fileTransfer rootFolder="/home/jziwo2s/public_html" accessType="SFTP" host="www2.inf.h-brs.de" port="22" sshConfigId="04647ddc-e232-4c41-90d1-44335f5a4a10" sshConfig="jziwo2s@www2.inf.h-brs.de:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
