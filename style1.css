@@ -16,7 +16,7 @@ header{
 
 footer{
     height: 80px;
-    padding-top: 30px;
+    padding-top: 40px;
     text-align: center;
     background-color: #c5c5c5;
     border-top: 2px solid black;
@@ -55,18 +55,15 @@ article li{
     list-style-type: none;
     /*float: left;*/
 }
-article{
+.article-ubung{
     display: grid;
     padding: 0px;
     margin: 0px;
-    height: 500px;
+    height: 530px;
     grid-template-columns: 25% 25% 25% 25%;
-    background-color: #bcecd4;
+    background-color: #e9f1ed;
 }
-/*.ubung3{
-    grid-column-start: 1;
-    background-color: magenta;
-}*/
+
 
 .table{
     display: table;
@@ -107,6 +104,30 @@ article{
 nav li:hover a{
     padding: 15px 30px 20px 30px;
 }
+section{
+    display: grid;
+    padding: 0px;
+    margin: 0px;
+    grid-template-columns: 50% 50% ;
+    background-color: #e9f1ed;
+    height: 530px;
+}
+.right{
+    float: left;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.left{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+img{
+    margin: 20px 20px;
+    width: 90%;
+    border-radius: 7px ;
+    border: 1px solid black;
+}
+
 @media screen and(max-width: 780px) {
     header{
         height: 50px;
