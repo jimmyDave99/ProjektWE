@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>prototypen</title>
+</head>
+<body>
+    <h1>Aufgabe 4.2 (Ergebnisse der Function conflict())</h1>
+    <script>
+
+        let personen=[];
+
+        function  Person (auto){
+           this.auto=auto;
+        }
+        function Autos(typ){
+            this.typ=typ;
+        }
+        function conflict(tab){
+
+            for (let i=0; i<tab.length; i++){
+                for (let j=i+1; j<tab.length; j++) {
+                    let reslt= tab[i].auto.filter(auto => tab[j].auto.includes(auto));
+                    if (reslt.length > 0) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        var a1= new Autos("BMW");
+        var a3= new Autos("Mercedes");
+        var p1= new Person([a1]);
+        var p2= new Person([a1]);
+        var p3= new Person([a3]);
+
+
+        let tab =[p1,p3];
+        //console.log(p1.auto);
+        document.write(conflict(tab));
+        console.log(conflict(tab));
+
+    </script>
+</body>
+</html>

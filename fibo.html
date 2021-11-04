@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fibo2</title>
+</head>
+<body>
+    <h1>Ergebnisse erste 2000 Fibonacci-Zahlen ohne BigInt</h1>
+<script>
+    function Fibonacci(x){
+        var i=1;
+        var j=0;
+        var z=0;
+        var  count=0;
+        var tab=[];
+        while (count<x){
+
+            z=i;
+            i+=j;
+            j=z;
+            count++;
+            tab[tab.length]=j;
+            console.log("\n"+count+"->"+j);
+            document.write("\n"+count+"->"+j);
+        }
+
+    };
+    console.log(Fibonacci(2000));
+</script>
+</body>
+</html>

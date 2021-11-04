@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ergebnisse Topologischesortierung</h1>
+    <p>[
+        ["schlafen", "studieren"],
+        ["essen", "studieren"],
+        ["studieren", "prüfen"]
+        ]</p>
+    <script>
+        /*
+         * source : https://gist.github.com/shinout/1232505
+         */
+        function toposort(edges) {
+            var nodes   = {},
+                sorted  = [],
+                visited = {};
+
+            var Node = function(id) {
+                this.id = id;
+                this.afters = [];
+            }
+
+
+            edges.forEach(function(v) {
+                var from = v[0], to = v[1];
+                if (!nodes[from]) nodes[from] = new Node(from);
+                if (!nodes[to]) nodes[to]     = new Node(to);
+                nodes[from].afters.push(to);
+            });
+
+
+            Object.keys(nodes).forEach(function visit(idstr, ancestors) {
+                var node = nodes[idstr],
+                    id   = node.id;
+
+
+                if (visited[idstr]) return;
+
+                if (!Array.isArray(ancestors)) ancestors = [];
+
+                ancestors.push(id);
+
+                visited[idstr] = true;
+
+                node.afters.forEach(function(afterID) {
+                    if (ancestors.indexOf(afterID) >= 0)
+                        throw new Error('closed chain : ' +  afterID + ' is in ' + id);
+
+                    visit(afterID.toString(), ancestors.map(function(v) { return v }));
+                });
+
+                sorted.unshift(id);
+            });
+
+            return sorted;
+        }
+
+        /**
+         * TEST
+         **/
+        function toposortTest() {
+
+
+            var edges = [
+                ["schlafen", "studieren"],
+                ["essen", "studieren"],
+                ["studieren", "prüfen"]
+            ];
+
+            var sorted = toposort(edges);
+            console.log(sorted);
+            document.write(sorted);
+
+            console.assert("essen"===toposort(edges)[0],"nicht geklapt");
+            console.assert("schlafen"===toposort(edges)[1]);
+            console.assert("studieren"===toposort(edges)[2]);
+            console.assert("prüfen"===toposort(edges)[3]);
+        }
+        toposortTest()
+
+    </script>
+</body>
+</html>

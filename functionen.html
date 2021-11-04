@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>functionen</title>
+</head>
+<body>
+    <h1>Ergebnisse Aufgabe4.1 Functionen</h1>
+    <script>
+        function identity(x){
+            return x;
+        }
+        document.write("\n"+"identity(4) ="+identity(4));
+
+        function identity_function(x){
+            return function(){return x};
+        }
+        //document.write("\n"+"identity_function(4) ="+identity_function(4));
+        function add(x,y){
+            return x+y;
+        }
+        document.write("\n"+"add(4,3) ="+add(4,3));
+        function mul(x,y){
+            return x*y;
+        }
+        document.write("\n"+"mul(4,3) ="+mul(4,3));
+        function addf(x){
+            return function(y){ return x+y};
+        }
+        //document.write("\n"+"addf(4) ="+addf(4));
+
+        function applyf(add){
+            return function(){return add(x,y);};
+        }
+        //document.write("\n"+"applyf(4,3) ="+applyf(4,3));
+    </script>
+</body>
+</html>
