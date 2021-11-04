@@ -8,18 +8,18 @@ h1{
     font-size: 40px;
     font-weight: normal;
     text-align: Center;
-
 }
 
 header{
     height: 200px;
     background-image: url("BackgrundHead2.png");
-    position: -webkit-sticky;
+    /*position: -webkit-sticky;
     position: sticky;
-    top:0px;
+    top:0px;*/
 }
 .headtitle{
     background-color: rgb(111, 111, 226);
+    border-radius: 5px;
 }
 .headtitle1{
     /*padding-top: 50px;*/
@@ -44,7 +44,7 @@ nav{
     background-color: rgb(111, 111, 226);
     position: -webkit-sticky;
     position: sticky;
-    top: 200px;
+    top: 0px;
 
 }
 nav ul{
@@ -76,6 +76,12 @@ article li{
     list-style-type: none;
     /*float: left;*/
 }
+.titlejs, .titlecss{
+    font-size: 40px;
+    font-weight: normal;
+    text-align: Center;
+    margin-left: 100px;
+}
 .article-ubung{
     display: grid;
     padding: 0px;
@@ -98,23 +104,25 @@ article li{
     grid-column-start: 2;
     grid-column-end: 3;
 }
-.menu-ind:hover, .article-ubung2_1:hover{
+.menu-ind:hover, .article-ubung2_1:hover,.menu-js:hover,.menu-css:hover,.menu-js:hover,
+.menu-php:hover,.menu-DOM:hover,.menu-ECMAScript:hover,.menu-functional:hover,.menu-Async:hover,.menu-SVG:hover,
+.menu-Vue:hover,.menu-Security:hover{
     border-top: 5px solid #4c8;
     background-color: RGBa(64, 200, 130, 0.15);
 }
-.menu-html:hover, .article-ubung2_2:hover{
+.article-ubung2_2:hover{
     border-top: 5px solid #f1dc4f;
     background-color: RGBa(241, 211, 79, 0.15);
 }
-.menu-css:hover, .article-ubung2_3:hover{
+ .article-ubung2_3:hover{
     border-top: 5px solid #0070BB;
     background-color: RGBa(000, 112, 192, 0.15);
 }
-.menu-js:hover,.article-ubung3_1:hover{
+.article-ubung3_1:hover{
     border-top: 5px solid #e44d26;
     background-color: RGBa(228, 77, 38, 0.15);
 }
-.menu-php:hover, .article-ubung3_2:hover{
+ .article-ubung3_2:hover{
     border-top: 5px solid #4c8;
     background-color: RGBa(64, 200, 130, 0.15);
 }
@@ -125,16 +133,17 @@ article li{
 nav li:hover a{
     padding: 15px 30px 20px 30px;
 }
-section{
+.presentation1{
     display: grid;
     padding: 0px;
     margin: 0px;
     grid-template-columns: 50% 50% ;
+    grid-template-rows:300px 300px 300px;
     background-color: #e9f1ed;
-    height: 530px;
+    /*height: 530px;*/
 }
 .right{
-    float: left;
+    /*float: left;*/
     grid-column-start: 2;
     grid-column-end: 3;
 }
@@ -142,9 +151,93 @@ section{
     grid-column-start: 1;
     grid-column-end: 2;
 }
-img{
-    margin: 20px 20px;
-    width: 90%;
+.left-css{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.right-css{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.left-js{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.right-js{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+p{
+    margin-left: 50px;
+}
+.imgall{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 50%;
+    border-radius: 7px ;
+    border: 1px solid black;
+}
+.imgcss,.imgjs{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 20%;
+    border-radius: 7px ;
+    border: 1px solid black;
+}
+.presentationcss{
+    display: grid;
+    padding: 0px;
+    margin: 0px;
+    grid-template-columns: 50% 50% ;
+    grid-template-rows:300px 300px 600px;
+    background-color: #e9f1ed;
+    /*height: 530px;*/
+}
+.css-inhalt{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+h2{
+    text-align: center;
+}
+.p2{
+    text-align: center;
+}
+.left-css1{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.right-css1{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.bild-ubung{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3 ;
+}
+
+.imgubung{
+    margin-top: 20px;
+    margin-left: 35%;
+    width: 30%;
     border-radius: 7px ;
     border: 1px solid black;
 }
