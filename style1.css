@@ -1,47 +1,67 @@
 body{
-    font-family: 'Roboto', sans-serif;
     margin: 0px;
     padding: 0px;
 }
 
 h1{
-    font-size: 40px;
-    font-weight: normal;
     text-align: Center;
 }
 
 header{
+    display: flex;
     height: 200px;
-    background-image: url("BackgrundHead2.png");
+    background-color: #000;
+    padding: 0px;
+
     /*position: -webkit-sticky;
     position: sticky;
     top:0px;*/
 }
-.headtitle{
-    background-color: rgb(111, 111, 226);
-    border-radius: 5px;
+
+/* Custom Scroll Bar */
+html::-webkit-scrollbar{
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #008970;
+    border-radius: 5rem;
+}
+.logoheader img{
+    width: 200px;
+
+}
+.titleoben{
+    color: #008970;
+    padding: 0px;
+    margin: 0px;
+    font-size: 40px;
+
 }
 .headtitle1{
-    /*padding-top: 50px;*/
-    padding: 0;
-    margin: 0;
+    color: #e7e1e1;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 50px;
+    margin-left: 500px;
 }
-.titleoben {
-    color: white;
-    font-size: 30px;
+a{
+    text-decoration: none;
 }
 
 
 footer{
     height: 80px;
-    padding-top: 40px;
     text-align: center;
     background-color: #c5c5c5;
     border-top: 2px solid black;
 }
+
 nav{
     width: 100%;
-    background-color: rgb(111, 111, 226);
+    background-color: #64b4a6;
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
@@ -56,13 +76,13 @@ nav li{
     list-style-type:none ;
     float: left;
 }
-nav a{
+nav ul li a{
     display: inline-block;
     text-decoration: none;
     padding: 20px 30px;
     color: #fff;
     text-transform: uppercase ;
-    font-size: 15px;
+    font-size: 18px;
 }
 article a{
     display: inline-block;
@@ -70,65 +90,26 @@ article a{
     padding: 20px 30px;
     color: #000;
     text-transform: uppercase ;
-    font-size: 15px;
+
 }
 article li{
     list-style-type: none;
     /*float: left;*/
 }
-.titlejs, .titlecss{
-    font-size: 40px;
-    font-weight: normal;
+.titlejs, .titlecss, .titledom{
+    font-size: 30px;
     text-align: Center;
     margin-left: 100px;
 }
-.article-ubung{
-    display: grid;
-    padding: 0px;
-    margin: 0px;
-    height: 530px;
-    grid-template-columns: 25% 25% 25% 25%;
-    background-color: #e9f1ed;
-}
-
-
 .table{
     display: table;
     margin: 0 auto;
-    grid-column-start: 1;
-    grid-column-end: 2;
 }
-.table2{
-    display: table;
-    margin: 0 auto;
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-.menu-ind:hover, .article-ubung2_1:hover,.menu-js:hover,.menu-css:hover,.menu-js:hover,
+.menu-js:hover,.menu-css:hover,
 .menu-php:hover,.menu-DOM:hover,.menu-ECMAScript:hover,.menu-functional:hover,.menu-Async:hover,.menu-SVG:hover,
 .menu-Vue:hover,.menu-Security:hover{
-    border-top: 5px solid #4c8;
-    background-color: RGBa(64, 200, 130, 0.15);
-}
-.article-ubung2_2:hover{
-    border-top: 5px solid #f1dc4f;
-    background-color: RGBa(241, 211, 79, 0.15);
-}
- .article-ubung2_3:hover{
-    border-top: 5px solid #0070BB;
-    background-color: RGBa(000, 112, 192, 0.15);
-}
-.article-ubung3_1:hover{
-    border-top: 5px solid #e44d26;
-    background-color: RGBa(228, 77, 38, 0.15);
-}
- .article-ubung3_2:hover{
-    border-top: 5px solid #4c8;
-    background-color: RGBa(64, 200, 130, 0.15);
-}
-.menu-ubung:hover,.article-ubung3_3:hover{
-    border-top: 5px solid #f1dc4f;
-    background-color: RGBa(000, 112, 192, 0.15);
+    border-top: 5px solid #008970;
+    background-color: #04a286;
 }
 nav li:hover a{
     padding: 15px 30px 20px 30px;
@@ -138,8 +119,8 @@ nav li:hover a{
     padding: 0px;
     margin: 0px;
     grid-template-columns: 50% 50% ;
-    grid-template-rows:300px 300px 300px;
-    background-color: #e9f1ed;
+    grid-template-rows:300px 300px 300px 400px;
+    background-color: #008970;
     /*height: 530px;*/
 }
 .right{
@@ -156,6 +137,9 @@ nav li:hover a{
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
+    box-shadow: 10px 5px 5px black;
+    background-color: #04a286;
+    margin-left: 30px;
 }
 .right-css{
     grid-row-start: 2;
@@ -168,6 +152,10 @@ nav li:hover a{
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 2;
+    box-shadow: 10px 5px 5px black;
+    background-color: #04a286;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 .right-js{
     grid-row-start: 3;
@@ -175,8 +163,25 @@ nav li:hover a{
     grid-column-start: 2;
     grid-column-end: 3;
 }
+.left-dom{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    box-shadow: 10px 5px 5px black;
+    background-color: #04a286;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.right-dom{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
 p{
-    margin-left: 50px;
+    margin-left: 30px;
 }
 .imgall{
     margin-top: 50px;
@@ -192,13 +197,20 @@ p{
     border-radius: 7px ;
     border: 1px solid black;
 }
+.imgdom{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 30%;
+    border-radius: 7px ;
+    border: 1px solid black;
+}
 .presentationcss{
     display: grid;
     padding: 0px;
     margin: 0px;
     grid-template-columns: 50% 50% ;
-    grid-template-rows:300px 300px 600px;
-    background-color: #e9f1ed;
+    grid-template-rows:300px 300px 300px 600px;
+    background-color: #008970;
     /*height: 530px;*/
 }
 .css-inhalt{
@@ -218,18 +230,38 @@ h2{
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
+    box-shadow: 10px 5px 5px black;
+    margin-left: 30px;
+    background-color: #04a286;
+
 }
 .right-css1{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    box-shadow: 10px 5px 5px black;
+    margin-right: 50px;
+    margin-top: 30px;
+    background-color: #04a286;
+}
+.right-js1{
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
 }
+.left-js1 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
 .bild-ubung{
     /*display: flex;*/
     /*justify-content: center;*/
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 3 ;
 }
@@ -249,6 +281,9 @@ h2{
     h1{
         font-size: 28px;
         margin: 20px 0px 0px 0px;
+    }
+    .headtitle1{
+        margin-left: 200px;
     }
     nav li a{
         font-size: 12px;
