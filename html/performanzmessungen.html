@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Performanzmessungen</title>
+</head>
+<body>
+<table>
+    <h1>Performanzmessungen</h1>
+    <tr>
+        <th>Vergleichung</th>
+        <th>Messzeiten</th>
+    </tr>
+
+    <tr>
+        <td><p id="testinnerHTML"></p></td>
+        <td><p id="innerHTML"></p></td>
+    </tr>
+    <tr>
+        <td><p id="testinnerText"></p></td>
+        <td><p id="innerText"></p></td>
+    </tr>
+    <tr>
+        <td><p id="testtextContent"></p></td>
+        <td><p id="textContent"></p></td>
+    </tr>
+    <tr>
+        <td><p id="testouterHTML"></p></td>
+        <td><p id="outerHTML"></p></td>
+    </tr>
+</table>
+    
+    <script>
+        // Perfoemance innerHTML
+        function finnerHTML(){
+            const t0 = performance.now();
+            document.getElementById('testinnerHTML').innerHTML="<td><p id=\"testouterHTML\"></p></td>";
+            const t1 = performance.now();
+            return t1-t0;
+        }
+        function finnerText(){
+            const t0 = performance.now();
+            document.getElementById('testinnerText').innerHTML="<td><p id=\"testouterHTML\"></p></td>";
+            const t1 = performance.now();
+            return t1-t0;
+        }
+        function fcontenttext(){
+            const t0 = performance.now();
+            document.getElementById('testtextContent').innerHTML="<td><p id=\"testouterHTML\"></p></td>";
+            const t1 = performance.now();
+            return t1-t0;
+        }
+        function fouterHTML(){
+            const t0 = performance.now();
+            document.getElementById('testouterHTML').innerHTML="<td><p id=\"testouterHTML\"></p></td>";
+            const t1 = performance.now();
+            return t1-t0;
+        }
+        function fehler(f){
+            let sm=0;
+            for(let i =0; i<1000;i++){
+                f();
+            }
+            for(let i =0; i<100000;i++){
+                sm+=f();
+            }
+            return sm/100000;
+        }
+        document.getElementById("innerHTML").innerHTML=fehler(()=>finnerHTML());
+        document.getElementById("innerText").innerHTML=fehler(()=> finnerText());
+        document.getElementById("textContent").innerHTML=fehler(()=> fcontenttext());
+        document.getElementById("outerHTML").innerHTML=fehler(()=> fouterHTML());
+
+        document.getElementById("testinnerHTML").innerHTML="innerHTML";
+        document.getElementById("testinnerText").innerHTML="innerText";
+        document.getElementById("testtextContent").innerHTML="textContent";
+        document.getElementById("testouterHTML").innerHTML="outerHTML";
+    </script>
+</body>
+</html>

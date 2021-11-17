@@ -1,0 +1,112 @@
+<!--source: Lösungen Ubung-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        #container {
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+        .entries {
+            border: 1px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Übung 5.3</h1>
+<h2>Topsort</h2>
+<div>
+    <input id="relation" type="text" placeholder="format: x->y">
+    <button id="add">add</button>
+    <button id="clear">clear</button>
+</div>
+<div id="container"></div>
+<script>var relations = new Array();
+
+var input = document.getElementById("relation");
+var add = document.getElementById("add");
+var clear = document.getElementById("clear");
+
+add.addEventListener("click",function() {
+    clearGraph();
+    updateGraph(input.value);
+    input.value = "";
+});
+
+input.addEventListener("keyup",function(e) {
+    if(e.key === "Enter") {
+        clearGraph();
+        updateGraph(input.value);
+        input.value = "";
+    }
+});
+
+clear.addEventListener("click",function() {
+    clearGraph();
+    deleteData();
+});
+
+function topsort(arg) {
+
+    var result = new Array();
+    var nodes = new Object();
+    var temp = Array.from(new Set(arg.flat()));
+
+    for(var i = 0; i < temp.length; i++) {
+        nodes[temp[i]] = 0;
+    }
+
+    arg.forEach(element => {
+        nodes[element[1]] += 1;
+    });
+
+    while(Object.keys(nodes).length) {
+        if(Object.values(nodes).indexOf(0) == -1) return null;
+        for (const [key, value] of Object.entries(nodes)) {
+            if(value == 0) {
+                result.push(key);
+                delete nodes[key]
+                arg.forEach(node => {
+                    if(node[0] === key) {
+                        nodes[node[1]] -= 1;
+                    }
+                });
+            }
+        }
+    }
+    return result;
+}
+
+function updateGraph(input) {
+    let relation = input.split("->");
+    relations.push(relation);
+    console.log(relations);
+
+    let output = topsort(relations);
+
+    if(output !== null) {
+        output.forEach(element => {
+            let entry = document.createElement("div");
+            entry.className = "entries";
+            entry.appendChild(document.createTextNode(element));
+            document.getElementById("container").appendChild(entry);
+        });
+    }
+}
+
+function deleteData() {
+    relations.length = 0;
+}
+
+function clearGraph() {
+    let container = document.getElementById("container");
+
+    while(container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+}</script>
+</body>
+</html>

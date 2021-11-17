@@ -3,21 +3,38 @@ body{
     padding: 0px;
 }
 
-h1{
+/*h1{
     text-align: Center;
-}
+}*/
 
 header{
-    display: flex;
+    display: grid;
     height: 200px;
+    grid-template-columns: 10% 90%;
     background-color: #000;
-    padding: 0px;
-
-    /*position: -webkit-sticky;
-    position: sticky;
-    top:0px;*/
+    align-items: center;
+    justify-content: center;
 }
+.logoheader img{
+    width: 200px;
 
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.titleoben{
+    color: #008970;
+    font-size: 40px;
+
+}
+.headtitle1{
+    color: #e7e1e1;
+    font-size: 20px;
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+
+}
 /* Custom Scroll Bar */
 html::-webkit-scrollbar{
     width: 0.5rem;
@@ -29,24 +46,7 @@ html::-webkit-scrollbar-thumb{
     background: #008970;
     border-radius: 5rem;
 }
-.logoheader img{
-    width: 200px;
 
-}
-.titleoben{
-    color: #008970;
-    padding: 0px;
-    margin: 0px;
-    font-size: 40px;
-
-}
-.headtitle1{
-    color: #e7e1e1;
-    font-size: 20px;
-    text-align: center;
-    padding-top: 50px;
-    margin-left: 500px;
-}
 a{
     text-decoration: none;
 }
@@ -96,7 +96,7 @@ article li{
     list-style-type: none;
     /*float: left;*/
 }
-.titlejs, .titlecss, .titledom{
+.titlejs, .titlecss, .titledom,.titleecm{
     font-size: 30px;
     text-align: Center;
     margin-left: 100px;
@@ -119,7 +119,7 @@ nav li:hover a{
     padding: 0px;
     margin: 0px;
     grid-template-columns: 50% 50% ;
-    grid-template-rows:300px 300px 300px 400px;
+    grid-template-rows:300px 300px 300px 400px 400px;
     background-color: #008970;
     /*height: 530px;*/
 }
@@ -180,15 +180,35 @@ nav li:hover a{
     grid-column-start: 2;
     grid-column-end: 3;
 }
+.left-ecm{
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    box-shadow: 10px 5px 5px black;
+    background-color: #04a286;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.right-ecm{
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
 p{
     margin-left: 30px;
 }
-.imgall{
+.imgall,.imgecm{
     margin-top: 50px;
     margin-left: 50px;
     width: 50%;
     border-radius: 7px ;
     border: 1px solid black;
+}
+.imgecm{
+    width: 60%;
 }
 .imgcss,.imgjs{
     margin-top: 50px;
@@ -209,11 +229,11 @@ p{
     padding: 0px;
     margin: 0px;
     grid-template-columns: 50% 50% ;
-    grid-template-rows:300px 300px 300px 600px;
+    grid-template-rows:300px 300px 300px 400px;
     background-color: #008970;
     /*height: 530px;*/
 }
-.css-inhalt{
+.css-inhalt,.DOM-inhalt{
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -269,11 +289,123 @@ h2{
 .imgubung{
     margin-top: 20px;
     margin-left: 35%;
-    width: 30%;
+    width: 20%;
     border-radius: 7px ;
     border: 1px solid black;
 }
+.presentationdom{
+    display: grid;
+    padding: 0px;
+    margin: 0px;
+    grid-template-columns: 50% 50% ;
+    grid-template-rows:300px 300px 400px;
+    background-color: #008970;
+    /*height: 530px;*/
+}
+.ubung-dom{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    box-shadow: 10px 5px 5px black;
+    background-color: #04a286;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.bild-ubungdom{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3 ;
+}
+/* Set a style for all buttons */
+button {
+    background-color: #04a286;
+    display: inline-block;
+    color: #000000;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 20px;
+}
+button:hover{
+    background-color: #008970;
+}
+/*
+ * source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal
+ */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+/*
+ * source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal
+ */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+/* Modal Content/Box */
+/*
+ * source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal
+ */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+/* The Close Button (x) */
+/*
+ * source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal
+ */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+/*
+ * source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal
+ */
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+/* Add Zoom Animation */
+/*
+ * source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal
+ */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
 
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
 @media screen and(max-width: 780px) {
     header{
         height: 50px;
