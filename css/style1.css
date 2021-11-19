@@ -3,21 +3,20 @@ body{
     padding: 0px;
 }
 
-/*h1{
+h1{
     text-align: Center;
-}*/
+}
 
 header{
     display: grid;
-    height: 200px;
+    height: 180px;
     grid-template-columns: 10% 90%;
     background-color: #000;
     align-items: center;
     justify-content: center;
 }
 .logoheader img{
-    width: 200px;
-
+    width: 100%;
     grid-column-start: 1;
     grid-column-end: 2;
 }
@@ -60,11 +59,14 @@ footer{
 }
 
 nav{
+
     width: 100%;
     background-color: #64b4a6;
     position: -webkit-sticky;
     position: sticky;
-    top: 0px;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    top: 0;
 
 }
 nav ul{
@@ -101,9 +103,20 @@ article li{
     text-align: Center;
     margin-left: 100px;
 }
-.table{
-    display: table;
-    margin: 0 auto;
+.menu-home{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.topnav{
+    display: flex;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-content: right;
+    overflow: hidden;
+}
+.topnav .icon {
+    display: none;
 }
 .menu-js:hover,.menu-css:hover,
 .menu-php:hover,.menu-DOM:hover,.menu-ECMAScript:hover,.menu-functional:hover,.menu-Async:hover,.menu-SVG:hover,
@@ -111,9 +124,18 @@ article li{
     border-top: 5px solid #008970;
     background-color: #04a286;
 }
-nav li:hover a{
+nav li:hover a,.active{
     padding: 15px 30px 20px 30px;
 }
+.menu-home:hover{
+    background-color: #04a286;
+
+}
+.active{
+    color: white;
+    font-size: 50px;
+}
+
 .presentation1{
     display: grid;
     padding: 0px;
@@ -262,8 +284,10 @@ h2{
     grid-column-end: 3;
     box-shadow: 10px 5px 5px black;
     margin-right: 50px;
-    margin-top: 30px;
+    margin-top: 20px;
+    padding-bottom: 20px;
     background-color: #04a286;
+
 }
 .right-js1{
     grid-row-start: 2;
@@ -318,7 +342,6 @@ h2{
     grid-column-start: 1;
     grid-column-end: 3 ;
 }
-/* Set a style for all buttons */
 button {
     background-color: #04a286;
     display: inline-block;
@@ -334,45 +357,30 @@ button {
 button:hover{
     background-color: #008970;
 }
-/*
- * source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal
- */
 .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
 }
-/*
- * source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal
- */
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+
+.csspos1 {
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
     padding-top: 60px;
 }
-/* Modal Content/Box */
-/*
- * source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal
- */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+.csspos1container{
+    background-color: white;
+    width: 70%;
+    height: 700px;
 }
-/* The Close Button (x) */
-/*
- * source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal
- */
 .close {
     position: absolute;
     right: 25px;
@@ -381,18 +389,12 @@ button:hover{
     font-size: 35px;
     font-weight: bold;
 }
-/*
- * source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal
- */
-.close:hover,
-.close:focus {
+
+.close:hover{
     color: red;
     cursor: pointer;
 }
-/* Add Zoom Animation */
-/*
- * source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal
- */
+
 .animate {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
@@ -410,19 +412,38 @@ button:hover{
     header{
         height: 50px;
     }
-    h1{
-        font-size: 28px;
-        margin: 20px 0px 0px 0px;
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
     }
-    .headtitle1{
-        margin-left: 200px;
-    }
-    nav li a{
-        font-size: 12px;
-        padding: 10px;
-    }
-    nav li:hover a{
-        padding: 5px 10px 10px 10px;
-    }
+
+    /*h1{*/
+    /*    font-size: 28px;*/
+    /*    margin: 20px 0px 0px 0px;*/
+    /*}*/
+    /*.headtitle1{*/
+    /*    margin-left: 200px;*/
+    /*}*/
+    /*nav li a{*/
+    /*    font-size: 12px;*/
+    /*    padding: 10px;*/
+    /*}*/
+    /*nav li:hover a{*/
+    /*    padding: 5px 10px 10px 10px;*/
+    /*}*/
 }
 
+@media screen and (max-width: 780px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}

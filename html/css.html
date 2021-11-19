@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style1.css">
     <script src="../js/script.js" defer></script>
@@ -17,6 +18,9 @@
             <strong class="headtitle">Darstellung von Übungsaufgaben</strong> </h1></a>
     </header>
     <nav>
+        <span class="menu-home">
+            <a class="active" href="../index.html"><i class="fa fa-home"></i></a>
+        </span>
         <div class="table">
             <ul>
                 <li class="menu-css">
@@ -73,29 +77,37 @@
                 <div class="table">
                     <ul>
                         <li class="css-positionierung1">
-                            <!--/*
-                            source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal
-                            -->
-                            <button onclick="document.getElementById('id01').style.display='block'"
+                            <button onclick="document.getElementById('idpos1').style.display='block'"
                                     style="width: auto;">CSS Positionierung 1</button>
-                            <div id="id01" class="modal">
-
-                                <form action="" class="modal-content animate" method="post">
+                            <div id="idpos1" class="csspos1">
                                     <div class="imgcontainer">
-                            <span onclick="document.getElementById('id01')
+                            <span onclick="document.getElementById('idpos1')
                     .style.display='none'" class="close" title="Close Modal">&times;</span>
-                                        <a href="ubung2_1.html">CSS Positionierung 1</a>
+                                        <iframe class="csspos1container animate" src="ubung2_1.html" title="übungcss positionierung1"></iframe>
                                     </div>
-                                </form>
-
                             </div>
-
                         </li>
                         <li class="css-positionierung2">
-                            <a href="ubung2_2.html">CSS Positionierung 2</a>
+                            <button onclick="document.getElementById('idpos2').style.display='block'"
+                                    style="width: auto;">CSS Positionierung 2</button>
+                            <div id="idpos2" class="csspos1">
+                                <div class="imgcontainer">
+                            <span onclick="document.getElementById('idpos2')
+                    .style.display='none'" class="close" title="Close Modal">&times;</span>
+                                    <iframe class="csspos1container animate" src="ubung2_2.html" title="übungcss positionierung2"></iframe>
+                                </div>
+                            </div>
                         </li>
                         <li class="css-Wireframe">
-                            <a href="ubung2_3.html">Wireframe</a>
+                            <button onclick="document.getElementById('idwir').style.display='block'"
+                                    style="width: auto;">Wireframe</button>
+                            <div id="idwir" class="csspos1">
+                                <div class="imgcontainer">
+                            <span onclick="document.getElementById('idwir')
+                    .style.display='none'" class="close" title="Close Modal">&times;</span>
+                                    <iframe class="csspos1container animate" src="ubung2_3.html" title="übungcss wireframe"></iframe>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -105,13 +117,37 @@
                 <div class="table">
                     <ul>
                         <li class="css-flexbox">
-                            <a href="ubung3_1.html">Responsiv mit Flexbox</a>
+                            <button onclick="document.getElementById('idrflex').style.display='block'"
+                                    style="width: auto;">Responsiv mit Flexbox</button>
+                            <div id="idrflex" class="csspos1">
+                                <div class="imgcontainer">
+                            <span onclick="document.getElementById('idrflex')
+                    .style.display='none'" class="close" title="Close Modal">&times;</span>
+                                    <iframe class="csspos1container animate" src="ubung3_1.html" title="übungcss flexbox"></iframe>
+                                </div>
+                            </div>
                         </li>
                         <li class="css-grid1">
-                            <a href="ubung3_2.html">Responsiv mit Grid</a>
+                            <button onclick="document.getElementById('idgrid').style.display='block'"
+                                    style="width: auto;">Responsiv mit Grid</button>
+                            <div id="idgrid" class="csspos1">
+                                <div class="imgcontainer">
+                            <span onclick="document.getElementById('idgrid')
+                    .style.display='none'" class="close" title="Close Modal">&times;</span>
+                                    <iframe class="csspos1container animate" src="ubung3_2.html" title="übungcss grid"></iframe>
+                                </div>
+                            </div>
                         </li>
                         <li class="css-grid2">
-                            <a href="ubung3_3.html">Responsiv mit Grid(Landing Page)</a>
+                            <button onclick="document.getElementById('idlp').style.display='block'"
+                                    style="width: auto;">Responsiv mit Grid(Landing Page)</button>
+                            <div id="idlp" class="csspos1">
+                                <div class="imgcontainer">
+                            <span onclick="document.getElementById('idlp')
+                    .style.display='none'" class="close" title="Close Modal">&times;</span>
+                                    <iframe class="csspos1container animate" src="ubung3_3.html" title="übungcss grid(landig Page)"></iframe>
+                                </div>
+                            </div>
                         </li>
                     </ul>
 
