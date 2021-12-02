@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klammerpaare</title>
+    <style>
+        /*
+        * source: lösungen übung WE v17
+        */
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 0;
+            text-align: center;
+        }
+        input{
+            text-align: center;
+        }
+        #textInput{
+            font-size: large;
+            width: 50%;
+            padding: 1%;
+        }
+        .customBraces{
+            margin: 5%;
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .customBraceInput{
+            margin: 10px;
+            width: 40px;
+        }
+        .customBracePair{
+            background-color: lightgreen;
+            width: max-content;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>Klammerpaare</h1>
+<form class="customBraces" onsubmit="return false;" autocomplete="off">
+    <p>Hier ihre eigenen "Klammerpaare" einfügen</p>
+    <label for="openBraceInput">Öffnende Klammer</label>
+    <input type="text" name="openBraceInput" class="customBraceInput" id="openBraceInput" onkeyup="handleInput()" autofocus/>
+    <label for="closedBraceInput">Schließende Klammer</label>
+    <input type="text" name="closedBraceInput" class="customBraceInput" id="closedBraceInput" onkeyup="handleInput()"/>
+    <button onclick="handleClick()">Klammerpaar hinzufügen</button>
+</form>
+<div>
+    <p>Ihre Klammerpaare</p>
+    <div class="bracesContainer">
+    </div>
+</div>
+<p>Hier Text mit Klammerpaaren einfügen</p>
+<input type="text" name="bracesInput" id="textInput" onkeyup="handleInput()" autocomplete="off"/>
+<script>
+    let opening = [];
+    let closing = [];
+    const checkBraces = (text) => {
+        let braceArr = [];
+        let isCorrect = true;
+        [...text].forEach(c => {
+            opening.forEach((b, i) => {
+                if(b === c){
+                    braceArr.push(closing[i])
+                }
+            });
+            if(closing.includes(c) && braceArr.pop() !== c){
+                isCorrect = false;
+            }
+        });
+        if(braceArr.length > 0){
+            isCorrect = false;
+        }
+
+        return isCorrect;
+    }
+
+    const handleInput = () => {
+        const textInput = document.getElementById("textInput");
+        const text = textInput.value;
+        if( ! text){
+            textInput.style.backgroundColor = "white";
+            return;
+        }
+
+        const isCorrect = checkBraces(text);
+
+        if(isCorrect){
+            textInput.style.backgroundColor = "lightgreen";
+        }else{
+            textInput.style.backgroundColor = "red";
+        }
+    }
+
+    const addBraces = (openingBrace, closingBrace) => {
+        opening.push(openingBrace);
+        closing.push(closingBrace);
+    }
+
+    const handleClick = () => {
+        const openBraceInput = document.getElementById("openBraceInput");
+        const closedBraceInput = document.getElementById("closedBraceInput");
+        const openingBrace = openBraceInput.value;
+        const closingBrace = closedBraceInput.value;
+
+        if(! openingBrace || ! closingBrace){
+            alert("Please enter a valid input");
+            return;
+        }
+
+        addBraces(openingBrace, closingBrace);
+
+        openBraceInput.value = "";
+        closedBraceInput.value = "";
+
+        const bracesContainer = document.querySelector(".bracesContainer");
+        bracesContainer.innerHTML = "";
+        for(let i = 0; i<opening.length; i++){
+            let p = document.createElement("p");
+            p.className = "customBracePair";
+            p.textContent = opening[i] + closing[i];
+            bracesContainer.appendChild(p);
+        }
+
+        document.getElementById("textInput").focus();
+    }
+
+    const tests = () => {
+        const teardown = () => {
+            opening = [];
+            closing = [];
+        }
+        const test1 = () => {
+            addBraces("x","y");
+            console.assert(checkBraces("xjhsfy") == true, "Test 1 failed!");
+        }
+        const test2 = () => {
+            addBraces("(","]");
+            console.assert(checkBraces("(test]123") == true, "Test 2 failed!");
+        }
+        const test3 = () => {
+            addBraces("a","b");
+            addBraces("c","d");
+            console.assert(checkBraces("abcd") == true, "Test 3 failed!");
+        }
+        const test4 = () => {
+            addBraces("a","b");
+            addBraces("c","d");
+            console.assert(checkBraces("acbd") == false, "Test 4 failed!");
+        }
+        test1();
+        teardown();
+        test2();
+        teardown();
+        test3();
+        teardown();
+        test4();
+        teardown();
+    }
+
+    tests();
+</script>
+</body>
+</html>

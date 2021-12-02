@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klammerpaare</title>
+    <style>
+        input {
+            width: 50%;
+            background-color: #c8ffc8;
+        }
+        .error {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+<h1>Klammerpaare</h1>
+<label for="input">Eingabe Feld: </label>
+<input type="text" id="input" class="correct" name="inputField" >
+
+<script>
+    /*
+     *source: lösungen übung WE v17
+     */
+    const input = document.getElementById('input');
+    input.addEventListener('input', event => {
+        const value = input.value;
+        if ( parse( value ) ){
+            input.classList.remove( 'error' );
+        } else {
+            input.classList.add( 'error' );
+        }
+    });
+    console.assert( parse('()') );
+    console.assert( ! parse('({)}') );
+    function parse( value ){
+        const stack = [];
+        for ( const ch of value.split('') ){
+            switch ( ch ){
+                case '[': case '(': case '{':
+                    stack.push( ch );
+                    break;
+                case ']':
+                    if ( stack.pop() !== '[' ) return false;
+                    break;
+                case ')':
+                    if ( stack.pop() !== '(' ) return false;
+                    break;
+                case '}':
+                    if ( stack.pop() !== '{' ) return false;
+                    break;
+                default:
+            }
+        }
+        return stack.length === 0;
+    }
+</script>
+</body>
+</html>

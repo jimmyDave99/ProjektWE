@@ -1,0 +1,50 @@
+.presentationdom{
+    display: grid;
+    padding: 0px;
+    margin: 0px;
+    grid-template-columns: 50% 50% ;
+    grid-template-rows:300px 600px 400px;
+    background-color: #008970;
+    /*height: 530px;*/
+}
+.ubung-dom{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    box-shadow: 10px 5px 5px black;
+    background-color: #04a286;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.bild-ubungdom{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3 ;
+}
+.collapsible:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+.collapsible {
+    background-color: rgba(0,0,0,0.2);
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 93%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+}
+.collapcontent{
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    width: 90.7%;
+}
+.iframedom{
+    width: 100%;
+    height: 300px;
+}

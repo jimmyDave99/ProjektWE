@@ -63,14 +63,13 @@ nav{
     position: -webkit-sticky;
     position: sticky;
     display: grid;
-    grid-template-columns: 7% 86% 7%;
+    grid-template-columns: 7% 83% 10%;
     top: 0;
 
 }
 nav ul{
     margin: 0px;
     padding: 0px;
-
 }
 nav li{
     list-style-type:none ;
@@ -87,7 +86,7 @@ nav ul li a{
 .menu-icon{
     display: none;
     cursor: pointer;
-    margin-top: 10px;
+    padding-top: 10px;
     grid-column-start: 3;
     grid-column-end: 4;
 }
@@ -136,22 +135,19 @@ article li{
 /*    font-size: 25px;*/
 /*}*/
 
-.menu-js:hover,.menu-css:hover,
+.menu-js:hover,.menu-css:hover,.menu-home:hover,
 .menu-php:hover,.menu-DOM:hover,.menu-ECMAScript:hover,.menu-functional:hover,.menu-Async:hover,.menu-SVG:hover,
 .menu-Vue:hover,.menu-Security:hover{
-    border-top: 5px solid #008970;
-    background-color: #04a286;
+    /*border-top: 5px solid #008970;*/
+    background-color: rgba(0,0,0,0.2);
 }
-nav li:hover a,.active{
-    padding: 15px 30px 20px 30px;
-}
-.menu-home:hover{
-    background-color: #04a286;
-
+nav li:hover a{
+    padding: 20px 30px 20px 30px;
 }
 .active{
     color: white;
     font-size: 50px;
+    padding-left: 15px;
 }
 
 .presentation1{
@@ -355,32 +351,8 @@ h2{
     border-radius: 7px ;
     border: 1px solid black;
 }
-.presentationdom{
-    display: grid;
-    padding: 0px;
-    margin: 0px;
-    grid-template-columns: 50% 50% ;
-    grid-template-rows:300px 300px 400px;
-    background-color: #008970;
-    /*height: 530px;*/
-}
-.ubung-dom{
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    box-shadow: 10px 5px 5px black;
-    background-color: #04a286;
-    margin-left: 100px;
-    margin-right: 100px;
-}
-.bild-ubungdom{
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    grid-column-end: 3 ;
-}
-button {
+
+.button1 {
     background-color: #04a286;
     display: inline-block;
     color: #000000;
@@ -392,7 +364,7 @@ button {
     border-radius: 5px;
     font-size: 20px;
 }
-button:hover{
+.button1:hover{
     background-color: #008970;
 }
 .imgcontainer {
@@ -463,17 +435,20 @@ button:hover{
         font-size: x-large;
     }
     nav ul li a{
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 20px 15px;
         display: inline-block;
-
+    }
+    nav li:hover a{
+        padding: 20px 15px 20px 15px;
     }
 }
 @media screen and (max-width: 1200px){
     nav ul li a{
-        padding-left: 7px;
-        padding-right: 7px;
+        padding: 20px 7px;
         display: inline-block;
+    }
+    nav li:hover a{
+        padding: 20px 7px 20px 7px;
     }
 }
 
@@ -500,8 +475,6 @@ button:hover{
         transition: transform 0.5s ease-in;
 
     }
-
-
     .menu-icon{
         display: block;
     }
@@ -518,6 +491,14 @@ button:hover{
         color: #fff;
         text-transform: uppercase ;
         font-size: 18px;
+    }
+    .left{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        overflow: hidden;
+    }
+    .menu-home:hover{
+        background-color: #64b4a6;
     }
 }
 

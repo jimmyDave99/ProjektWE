@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>WWW-Navigator</title>
+    <script>
+
+
+        // fetch( 'nav.json' )
+        //     .then( response => response.json() )
+        //     .then( jsObject => console.log( jsObject ) )
+        //     //.then( jsObject => document.write( jsObject ) )
+        //     .catch( function( error ) {
+        //         console.error('Request failed ', error);
+        //     });
+        const url = 'nav.json';
+        async  function getData(){
+            const response = await fetch(url);
+            const data = await response.json();
+            //const {html}= data;
+
+            document.getElementById('Htmlcontent').textContent=data['html']['headings']['content'];
+            document.getElementById('Html_ref').textContent=data['html']['headings']['references'];
+            document.getElementById('parcontent').textContent=data['html']['paragraph']['content'];
+            document.getElementById('pararef').textContent=data['html']['paragraph']['references'];
+            document.getElementById('seleccontent').textContent=data['css']['selectors']['content'];
+            document.getElementById('selecref').textContent=data['css']['selectors']['references'];
+            document.getElementById('colorcontent').textContent=data['css']['colors']['content'];
+            document.getElementById('colorref').textContent=data['css']['colors']['references'];
+            document.getElementById('funccontent').textContent=data['javascript']['function']['content'];
+            document.getElementById('funcref').textContent=data['javascript']['function']['references'];
+            document.getElementById('objectcontent').textContent=data['javascript']['object']['content'];
+            document.getElementById('objectref').textContent=data['javascript']['object']['references'];
+
+        }
+        getData();
+    </script>
+    <style>
+        body{
+            /*border-radius: 6px;*/
+            /*background-color: #c28283;*/
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: #c24f4f;
+            height: 100px;
+            color: white;
+            margin-top:0;
+        }
+        h1{
+            text-align: center;
+        }
+        .content{
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            grid-template-rows: auto;
+            /*height: 500px;*/
+            padding: 0;
+            margin: 0;
+        }
+        .menu{
+            background-color: #c28283;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            padding: 0;
+            margin: 0;
+        }
+        .docu{
+            background-color: #95d2f4;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .ref{
+            background-color: #c28283;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .footer{
+            background-color: black;
+            height: 40px;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        .ref{
+            color: white;
+        }
+        .pfooter{
+            text-align: center;
+            color: white;
+            
+        }
+        .ft{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1> WWW-Navigator</h1>
+</header>
+<nav class="content">
+    <div class="menu"></div>
+    <div class="docu">
+        <h2>html</h2>
+        <h3>headings</h3>
+        <p>
+            <span id="Htmlcontent"> </span>
+        </p>
+        <h3>Paragraph</h3>
+        <p>
+            <span id="parcontent"> </span>
+        </p>
+        <h2>css</h2>
+        <h3>selectors</h3>
+        <p>
+            <span id="seleccontent"> </span>
+        </p>
+        <h3>colors</h3>
+        <p>
+            <span id="colorcontent"> </span>
+        </p>
+        <h2>Javascript</h2>
+        <h3>function</h3>
+        <p>
+            <span id="funccontent"> </span>
+        </p>
+        <h3>object</h3>
+        <p>
+            <span id="objectcontent"> </span>
+        </p>
+    </div>
+
+    </div>
+    <div class="ref">
+        <p>
+            <span id="Html_ref"> </span>
+        </p>
+        <p>
+            <span id="pararef"> </span>
+        </p>
+        <p>
+            <span id="selecref"> </span>
+        </p>
+        <p>
+            <span id="colorref"> </span>
+        </p>
+        <p>
+            <span id="funcref"> </span>
+        </p>
+        <p>
+            <span id="objectref"> </span>
+        </p>
+    </div>
+</nav>
+<footer class="footer">
+    <p class="pfooter"><span class="ft">Footer:</span> Sitemap Home News Contact About</p>
+</footer>
+</div>
+</body>
+</html>

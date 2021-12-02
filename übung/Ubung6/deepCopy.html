@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>deepCopy</title>
+</head>
+<body>
+<h1>DeepCopy</h1>
+<p>Ergebnisse sehen sie besser in Konsole</p>
+<script>
+    /*
+     * source : https://javascript.plainenglish.io/how-to-deep-copy-objects-and-arrays-in-javascript-7c911359b089
+     */
+    const deepCopy = (strukt)=>{
+        let outObject
+
+
+        outObject = Array.isArray(strukt) ? [] : {}
+        if (typeof strukt !== "object"|| strukt=== null){
+            return strukt;
+        }
+        for (let [key,value] of Object.entries(strukt)) {
+            value=strukt[key];
+
+            outObject[key] = deepCopy(value);
+        }
+
+        return outObject;
+
+    }
+    let originalArray = [35, 3700, { hello: "world" }]
+    let deepCopiedArray = deepCopy(originalArray);
+    console.log(deepCopy(deepCopiedArray));
+
+    console.assert(JSON.stringify(originalArray)===JSON.stringify(deepCopiedArray));
+
+
+</script>
+
+</body>
+</html>
