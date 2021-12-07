@@ -1,0 +1,23 @@
+{
+  "BW": {
+    "Anzahl": "880.657",
+    "Differenz_zum_Vortag": "10.598",
+    "Faelle_in_den_letzen_7_Tagen": "59.201",
+    "7-Tagen_Inzidenz": "533,2",
+    "Todesfaelle": "11.966"
+  },
+  "Bayern": {
+    "Anzahl": "1.191.561",
+    "Differenz_zum_Vortag": "6.168",
+    "Faelle_in_den_letzen_7_Tagen": "69.172",
+    "7-Tagen_Inzidenz": "526,4",
+    "Todesfaelle": "17.954"
+  },
+  "Berlin": {
+    "Anzahl": "285.058",
+    "Differenz_zum_Vortag": "308",
+    "Faelle_in_den_letzen_7_Tagen": "12508",
+    "7-Tagen_Inzidenz": "341,4",
+    "Todesfaelle": "3.855"
+  }
+}

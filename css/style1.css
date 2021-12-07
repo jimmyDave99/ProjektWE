@@ -487,7 +487,7 @@ h2{
     nav ul li a{
         display: inline-block;
         text-decoration: none;
-        padding: 20px 30px;
+        /*padding: 20px 30px;*/
         color: #fff;
         text-transform: uppercase ;
         font-size: 18px;
@@ -499,6 +499,13 @@ h2{
     }
     .menu-home:hover{
         background-color: #64b4a6;
+    }
+    .menu-js:hover,.menu-css:hover,.menu-home:hover,
+    .menu-php:hover,.menu-DOM:hover,.menu-ECMAScript:hover,.menu-functional:hover,.menu-Async:hover,.menu-SVG:hover,
+    .menu-Vue:hover,.menu-Security:hover{
+        /*border-top: 5px solid #008970;*/
+        width: 100%;
+        text-align: center;
     }
 }
 

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>svg Grafik</title>
+</head>
+<style>
+    svg:hover{
+        /*animation-name: verdopelnsvg;*/
+        /*animation-duration: 4s;*/
+        transform: scale(2);
+    }
+    svg{
+
+    }
+    @keyframes verdopelnsvg {
+        from{width:250px; height:260px;}
+        to{width:500px; height:520px;}
+    }
+</style>
+<body>
+<h1>SVG Use the Platform</h1>
+<svg viewBox="15 15 300 370" width="250" height="260" fill="#cb798d" >
+    <rect x="100" y="105" width="100%" height="100%" fill="#cb798d" />
+    <text x="105" y="155" fill="#fff" font-size="50px">Use</text>
+    <line x1="115" y1="170" x2="330" y2="170" stroke="#fff" stroke-width="2" />
+    <text x="115" y="230" fill="#fff" font-size="50px">The</text>
+    <line x1="115" y1="245" x2="330" y2="245" stroke="#fff" stroke-width="2" />
+    <text x="115" y="305" fill="#fff" font-size="50px">Platform</text>
+    <line x1="115" y1="320" x2="330" y2="320" stroke="#fff" stroke-width="2" />
+</svg>
+</body>
+</html>

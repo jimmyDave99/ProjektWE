@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>SVG Diagramm</title>
+</head>
+<body>
+<style>
+    /*#statSvg{background-image:url('svg-rasterlinie.jpeg');}*/
+    #statSvg rect{opacity: 0.9;}
+    #statSvg rect:hover{opacity: 0.6;}
+    #statSvg .bwanzahl:hover{}
+</style>
+
+<h1>Balkendiagramm  COVID-19: Fallzahlen</h1>
+<svg id="statSvg"  width="100%" height="600">
+    <text class="BW" x="10" y="50" font-size="12" font-family="Arial" fill="#404040">Baden-Württemberg</text>
+    <rect class="bwanzahl" x="140" y="35" width="857" height="7" rx="3" ry="3" fill="#7cb5ec" />
+    <text id="number1BW" x="1000" y="43" fill="#404040"  font-size="15px"></text>
+    <rect class="bwdiffVor" x="140" y="43" width="10" height="7" rx="3" ry="3" fill="#434348" />
+    <text id="number2BW" x="150" y="50" fill="#404040"  font-size="15px">4.598</text>
+    <rect class="bwFlTBW" x="140" y="51" width="57" height="7" rx="3" ry="3" fill="#90ed7d" />
+    <text id="number3BW" x="200" y="60" fill="#404040"  font-size="15px">4.598</text>
+    <rect class="bwTI" x="140" y="59" width="5" height="7" rx="7" ry="1" fill="#f7a35c" />
+    <text id="number4BW" x="150" y="67" fill="#404040"  font-size="15px">4.598</text>
+    <rect class="bwtode" x="140" y="67" width="11" height="7" rx="7" ry="1" fill="red" />
+    <text id="number5BW" x="160" y="74" fill="#404040"  font-size="15px">4.598</text>
+
+
+    <text class="Bayen" x="10" y="120" font-size="12" font-family="Arial" fill="#404040">Bayern</text>
+    <rect class="bwanzahl" x="140" y="107" width="1167" height="7" rx="3" ry="3" fill="#7cb5ec" />
+    <text id="number1Bayern" x="1320" y="115" fill="#404040"  font-size="15px"></text>
+    <rect class="bwdiffVor" x="140" y="115" width="13" height="7" rx="3" ry="3" fill="#434348" />
+    <text id="number2Bayern" x="155" y="122" fill="#404040"  font-size="15px"></text>
+    <rect class="bwFlT" x="140" y="123" width="73" height="7" rx="3" ry="3" fill="#90ed7d" />
+    <text id="number3Bayern" x="220" y="130" fill="#404040"  font-size="15px"></text>
+    <rect class="bwTI" x="140" y="131" width="5" height="7" rx="7" ry="1" fill="#f7a35c" />
+    <text id="number4Bayern" x="148" y="138" fill="#404040"  font-size="15px"></text>
+    <rect class="bwtode" x="140" y="139" width="11" height="7" rx="7" ry="1" fill="red" />
+    <text id="number5Bayern" x="155" y="150" fill="#404040"  font-size="15px"></text>
+    <line x1="141" y1="10" x2="141" y2="300" stroke-width="2" stroke="#808080" />
+
+    <text class="Berlin" x="10" y="190" font-size="12" font-family="Arial" fill="#404040">Berlin</text>
+    <rect class="bwanzahl" x="140" y="177" width="285" height="7" rx="3" ry="3" fill="#7cb5ec" />
+    <text id="number1Berlin" x="430" y="185" fill="#404040"  font-size="15px"></text>
+    <rect class="bwdiffVor" x="140" y="185" width="3" height="7" rx="3" ry="3" fill="#434348" />
+    <text id="number2Berlin" x="155" y="192" fill="#404040"  font-size="15px"></text>
+    <rect class="bwFlT" x="140" y="193" width="12" height="7" rx="3" ry="3" fill="#90ed7d" />
+    <text id="number3Berlin" x="200" y="200" fill="#404040"  font-size="15px"></text>
+    <rect class="bwTI" x="140" y="201" width="3" height="7" rx="7" ry="1" fill="#f7a35c" />
+    <text id="number4Berlin" x="148" y="208" fill="#404040"  font-size="15px"></text>
+    <rect class="bwtode" x="140" y="209" width="5" height="7" rx="7" ry="1" fill="red" />
+    <text id="number5Berlin" x="155" y="220" fill="#404040"  font-size="15px"></text>
+    <line x1="141" y1="10" x2="141" y2="300" stroke-width="2" stroke="#808080" />
+
+    <!--    legend-->
+    <rect x="120" y="320" width="250" stroke-width="2" stroke="#808080" height="200" fill="#fff" />
+    <circle cx="140" cy="345" r="10" fill="#7cb5ec" />
+    <text x="155" y="350" fill="#404040"  font-size="15px">Anzahl</text>
+    <circle cx="140" cy="375" r="10" fill="#434348" />
+    <text x="155" y="380" fill="#404040"  font-size="15px">Differenz zum Vortag</text>
+    <circle cx="140" cy="405" r="10" fill="#90ed7d" />
+    <text x="155" y="410" fill="#404040"  font-size="15px">Fälle in den letzen 7 Tagen</text>
+    <circle cx="140" cy="435" r="10" fill="#f7a35c" />
+    <text x="155" y="440" fill="#404040"  font-size="15px">7-Tagen Inzidenz</text>
+    <circle cx="140" cy="465" r="10" fill="red" />
+    <text x="155" y="470" fill="#404040"  font-size="15px">Todesfälle</text>
+
+</svg>
+<script>
+    fetch( 'balkdiag.json' )
+        .then( response => response.json() )
+        .then( jsObject => {
+            const stadt=["BW","Bayern","Berlin"];
+            // const id=0;
+            const id=[0,1,2,3,4];
+            stadt.map(elt=>{
+
+                document.getElementById('number1'+elt).textContent=jsObject[elt]['Anzahl'];
+                document.getElementById('number2'+elt).textContent=jsObject[elt]['Differenz_zum_Vortag'];
+                document.getElementById('number3'+elt).textContent=jsObject[elt]['Faelle_in_den_letzen_7_Tagen'];
+                document.getElementById('number4'+elt).textContent=jsObject[elt]['7-Tagen_Inzidenz'];
+                document.getElementById('number5'+elt).textContent=jsObject[elt]['Todesfaelle'];
+            });
+
+        } )
+
+</script>
+</body>
