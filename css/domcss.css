@@ -3,7 +3,7 @@
     padding: 0px;
     margin: 0px;
     grid-template-columns: 50% 50% ;
-    grid-template-rows:300px 600px 400px;
+    grid-template-rows:300px 600px 700px;
     background-color: #008970;
     /*height: 530px;*/
 }
@@ -14,8 +14,8 @@
     grid-column-end: 3;
     box-shadow: 10px 5px 5px black;
     background-color: #04a286;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 60px;
+    margin-right: 60px;
 }
 .bild-ubungdom{
     grid-row-start: 3;
@@ -47,4 +47,11 @@
 .iframedom{
     width: 100%;
     height: 300px;
+}
+.imgubung{
+    margin-top: 20px;
+    margin-left: 20%;
+    width: 60%;
+    border-radius: 7px ;
+    border: 1px solid black;
 }

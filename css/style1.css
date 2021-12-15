@@ -286,7 +286,7 @@ p{
     padding: 0px;
     margin: 0px;
     grid-template-columns: 50% 50% ;
-    grid-template-rows:300px 300px 300px 400px;
+    grid-template-rows:300px 400px 300px 400px;
     background-color: #008970;
 }
 .css-inhalt,.DOM-inhalt{
@@ -336,8 +336,6 @@ h2{
     grid-column-end: 2;
 }
 .bild-ubung{
-    /*display: flex;*/
-    /*justify-content: center;*/
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 1;
