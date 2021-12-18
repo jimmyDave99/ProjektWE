@@ -28,7 +28,7 @@ window.onclick = function (event){
 
 
 /*
-     * source : https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1118s
+     * Inspirietsource : https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1118s
     */
 const navSlide = () => {
     const micon= document.querySelector('.menu-icon');
@@ -70,4 +70,27 @@ for (i = 0; i< collap.length; i++ ){
             content.style.display = "block";
         }
     });
+}
+
+//Rolle wichtige sprache
+
+let kreis = document.getElementById("kreis");
+let oben = document.getElementById("oben");
+let unten = document.getElementById("unten");
+
+let dreh = kreis.style.transform;
+let drehalle;
+
+oben.addEventListener("click",nachOben);
+unten.addEventListener("click",nachUnten);
+
+function nachOben(){
+    drehalle = dreh + "rotate(-90deg)";
+    kreis.style.transform=drehalle;
+    dreh = drehalle;
+}
+function nachUnten(){
+    drehalle = dreh + "rotate(90deg)";
+    kreis.style.transform=drehalle;
+    dreh = drehalle;
 }

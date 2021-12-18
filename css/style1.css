@@ -65,11 +65,12 @@ nav{
     display: grid;
     grid-template-columns: 7% 83% 10%;
     top: 0;
+    z-index: 1;
 
 }
 nav ul{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 nav li{
     list-style-type:none ;
@@ -155,19 +156,97 @@ nav li:hover a{
     padding: 0px;
     margin: 0px;
     grid-template-columns: 50% 50% ;
-    grid-template-rows:300px 300px 300px 400px 400px 400px;
+    grid-template-rows:800px 300px 300px 400px 400px 400px;
     background-color: #008970;
     /*height: 530px;*/
 }
-.right{
-    /*float: left;*/
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-.left{
+/*.right{*/
+/*    !*float: left;*!*/
+/*    grid-column-start: 2;*/
+/*    grid-column-end: 3;*/
+/*}*/
+.info{
     grid-column-start: 1;
-    grid-column-end: 2;
-    overflow: hidden;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    top: 0;
+    left: -10px;
+    transform: translate(-50%);
+    z-index: 0;
+
+}
+#kreis{
+    width: 750px;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: 1s;
+
+}
+.eigenschaften img{
+    width: 80px;
+    border-radius: 5px;
+
+}
+.eigenschaften{
+    position: absolute;
+
+}
+.eins{
+    top: 45%;
+    right: 10%;
+}
+.zwei{
+    top: 10%;
+    right: 40%;
+    transform: rotate(-90deg);
+}
+.drei{
+    top: 75%;
+    right: 45%;
+    transform: rotate(-270deg);
+}
+.vier{
+    top: 35%;
+    right: 75%;
+    transform: rotate(-180deg);
+}
+.imgall{
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 10px;
+}
+.buttonInfo{
+    position: absolute;
+    right: 30%;
+    top: 80%;
+    transform: translateY(-50%);
+}
+.eigenschaften div h1{
+    color: #024b3e;
+}
+#oben,#unten{
+    cursor: pointer;
+    color: white;
+}
+.overinfo{
+    width: 0;
+    height: 0;
+
+    border-top: 400px solid #024b3e;
+    border-right: 400px solid #008970;
+    border-bottom: 400px solid #024b3e;
+    border-left: 400px solid #024b3e;
+    margin-left: 50%;
+    position: absolute;
 }
 .left-css{
     grid-row-start: 2;
@@ -177,6 +256,7 @@ nav li:hover a{
     box-shadow: 10px 5px 5px black;
     background-color: #04a286;
     margin-left: 30px;
+    margin-top: 20px;
 }
 .right-css{
     grid-row-start: 2;
@@ -254,7 +334,7 @@ nav li:hover a{
 p{
     margin-left: 30px;
 }
-.imgall,.imgecm,.imgfunc{
+.imgecm,.imgfunc{
     display: block;
     margin-top: 50px;
     margin-left: 50px;
@@ -479,7 +559,7 @@ h2{
     .topnav li{
         opacity: 0;
     }
-    .imgall,.imgecm,.imgcss,.imgjs,.imgdom,.imgfunc{
+   .imgecm,.imgcss,.imgjs,.imgdom,.imgfunc{
         display: none;
     }
     nav ul li a{
