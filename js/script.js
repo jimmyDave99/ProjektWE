@@ -1,4 +1,4 @@
-
+Vue.config.productionTip = false;
 let modal1= document.getElementById('idpos1');
 let modal2= document.getElementById('idpos2');
 let modal3= document.getElementById('idwir');
@@ -32,7 +32,7 @@ window.onclick = function (event){
     */
 const navSlide = () => {
     const micon= document.querySelector('.menu-icon');
-    const nav = document.querySelector('.topnav');
+    const nav = document.querySelector(' .topnav');
     const navLinks = document.querySelectorAll('.topnav li');
 
     micon.addEventListener('click',()=>{
@@ -94,3 +94,5 @@ function nachUnten(){
     kreis.style.transform=drehalle;
     dreh = drehalle;
 }
+
+

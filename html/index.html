@@ -7,19 +7,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style1.css">
-    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/style1.css">
+    <script src="../js/script.js" defer></script>
+
     <title>Mein Webseite</title>
 </head>
 <body>
 <div class="gesamt">
 
-    <header>
-        <!--source w-%20eng.png: https://www.canva.com/design/play?type=TAB7AVEOUWQ&category=tACZCvjI6mE&locale=de-DE&analyticsCorrelationId=f100a21f-df3b-48f9-ac1e-3cf4d18e9104-->
-       <a href="index.html" class="logoheader"><img src="bilder/w-%20eng.png" alt="logo"></a>
-        <a href="index.html"><h1 class="headtitle1"><strong class="titleoben">Web Engineering</strong><br>
-            Darstellung von Übungsaufgaben </h1></a>
-    </header>
+    <div id="AppHeader">
+        <my-header></my-header>
+    </div>
     <nav>
         <div class="menu-home">
             <a class="active" href="index.html"><i class="fa fa-home"></i></a>
@@ -27,34 +25,34 @@
 
             <ul class="topnav" id="topnav2">
                 <li class="menu-css" title="css">
-                    <a href="html/css.html">CSS</a>
+                    <a href="css.html">CSS</a>
                 </li>
                 <li class="menu-js">
-                    <a href="html/javascript.html">JavaScript</a>
+                    <a href="javascript.html">JavaScript</a>
                 </li>
                 <li class="menu-DOM">
-                    <a href="html/DOM.html">DOM</a>
+                    <a href="dom.html">DOM</a>
                 </li>
                 <li class="menu-ECMAScript">
-                    <a href="html/ECMAScript.html">ECMAScript</a>
+                    <a href="ecmascript.html">ECMAScript</a>
                 </li>
                 <li class="menu-functional">
-                    <a href="html/functional.html">Functional</a>
+                    <a href="functional.html">Functional</a>
                 </li>
                 <li class="menu-Async">
-                    <a href="html/async.html">Async</a>
+                    <a href="async.html">Async</a>
                 </li>
                 <li class="menu-SVG">
-                    <a href="html/svg.html">SVG</a>
+                    <a href="svg.html">SVG</a>
                 </li>
                 <li class="menu-Vue">
-                    <a href="html/vue.html">Vue</a>
+                    <a href="vue.html">Vue</a>
                 </li>
                 <li class="menu-php">
-                    <a href="html/php.html">PHP</a>
+                    <a href="php.html">PHP</a>
                 </li>
                 <li class="menu-Security">
-                    <a href="html/security.html">Security</a>
+                    <a href="security.html">Security</a>
                 </li>
             </ul>
 
@@ -69,28 +67,28 @@
 
                 <div class="info">
                     <div class="overinfo"></div>
-                    <img class="imgall" src="bilder/bild%20php,js,css,html.png" alt="bildalgemein">
+                    <img class="imgall" src="../bilder/bild%20php,js,css,html.png" alt="bildalgemein">
                         <div id="kreis">
                             <div class="eigenschaften eins">
-                                <img src="bilder/iconhtml.png" alt="iconhtml">
+                                <img src="../bilder/iconhtml.png" alt="iconhtml">
                                 <div>
                                     <h1>Webinhalt<br> strukturieren</h1>
                                 </div>
                             </div>
                             <div class="eigenschaften zwei">
-                                <img src="bilder/iconcss.png" alt="iconcss">
+                                <img src="../bilder/iconcss.png" alt="iconcss">
                                 <div>
                                     <h1>Webseite<br>gestalten</h1>
                                 </div>
                             </div>
                             <div class="eigenschaften drei">
-                                <img src="bilder/iconjs.png" alt="iconjs">
+                                <img src="../bilder/iconjs.png" alt="iconjs">
                                 <div>
                                     <h1>Skriptsprache<br>für Webseiten</h1>
                                 </div>
                             </div>
                             <div class="eigenschaften vier">
-                                <img src="bilder/iconphp.png" alt="iconphp">
+                                <img src="../bilder/iconphp.png" alt="iconphp">
                                 <div>
                                     <h1>Skriptsprache<br>für Webseiten</h1>
                                 </div>
@@ -107,42 +105,45 @@
 <!--                    <img class="imgall" src="bilder/bild%20php,js,css,html.png" alt="bild1">-->
 <!--                </div>-->
             <div class="left-css">
-                <a class="titlecss"  href="html/css.html">CSS</a>
+                <a class="titlecss"  href="css.html">CSS</a>
 
             </div>
             <div class="right-css">
-                <img class="imgcss" src="bilder/csslogo1.png" alt="bildlogocss">
+                <img class="imgcss" src="../bilder/csslogo1.png" alt="bildlogocss">
             </div>
             <div class="left-js">
-                <a class="titlejs"  href="html/javascript.html">Javascript</a>
+                <a class="titlejs"  href="javascript.html">Javascript</a>
             </div>
             <div class="right-js">
-                <img class="imgjs" src="bilder/jslogo.png" alt="bildlogojs">
+                <img class="imgjs" src="../bilder/jslogo.png" alt="bildlogojs">
             </div>
             <div class="left-dom">
-                <a class="titledom"  href="html/DOM.html">Dom</a>
+                <a class="titledom"  href="DOM.html">Dom</a>
             </div>
             <div class="right-dom">
-                <img class="imgdom" src="bilder/Dombild.png" alt="bildlogodom">
+                <img class="imgdom" src="../bilder/Dombild.png" alt="bildlogodom">
             </div>
             <div class="left-ecm">
-                <a class="titleecm"  href="html/ECMAScript.html">ECMAScript</a>
+                <a class="titleecm"  href="ECMAScript.html">ECMAScript</a>
             </div>
             <div class="right-ecm">
-                <img class="imgecm" src="bilder/bildes6.png" alt="bildlogoecm"> <!--source bildes6.png: url bildes6: https://labs.tadigital.com/index.php/2020/04/16/ecma-script-programming-language-es6/-->
+                <img class="imgecm" src="../bilder/bildes6.png" alt="bildlogoecm"> <!--source bildes6.png: url bildes6: https://labs.tadigital.com/index.php/2020/04/16/ecma-script-programming-language-es6/-->
             </div>
             <div class="left-func">
-                <a class="titlefunc"  href="html/functional.html">Functional</a>
+                <a class="titlefunc"  href="functional.html">Functional</a>
             </div>
             <div class="right-func">
-                <img class="imgfunc" src="bilder/imgfunctional.png" alt="bildlogofunc"> <!--source imgfunctional.png: https://data-flair.training/blogs/javascript-function/amp/-->
+                <img class="imgfunc" src="../bilder/imgfunctional.png" alt="bildlogofunc"> <!--source imgfunctional.png: https://data-flair.training/blogs/javascript-function/amp/-->
             </div>
         </section>
     </article>
-    <footer>
-        <p id="footerp">Copyright 2021 Ziwo Tsajio Jimmy Dave</p>
-    </footer>
+
+    <div id="AppFooter">
+        <my-footer></my-footer>
+    </div>
 
 </div>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="../js/css.js" defer></script>
 </body>
 </html>
