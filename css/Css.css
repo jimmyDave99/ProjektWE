@@ -1,11 +1,11 @@
-#svglogo{
+#svglogo,#svglogodom{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 0;
 }
-#svglogo path:nth-child(1) {
+#svglogo path:nth-child(1){
     stroke-dasharray: 560px;
     stroke-dashoffset: 550px;
     animation: svg-anim 3s ease forwards ;
@@ -23,8 +23,8 @@
     /*}*/
 
     .left-css1 {
-        grid-row-start: 1;
-        grid-row-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
         grid-column-start: 1;
         grid-column-end: 3;
         box-shadow: 10px 5px 5px black;
@@ -36,8 +36,8 @@
     }
 
     .right-css1 {
-        grid-row-start: 2;
-        grid-row-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
         grid-column-start: 1;
         grid-column-end: 3;
         box-shadow: 10px 5px 5px black;
@@ -46,16 +46,10 @@
         padding-bottom: 20px;
         background-color: #04a286;
     }
-    .bild-ubung{
-        grid-row-start: 3;
-        grid-row-end: 5;
-        grid-column-start: 1;
-        grid-column-end: 3 ;
-    }
     .imgubung{
         margin-top: 70px;
         margin-left: 20%;
-        width: 60%;
+        width: 250px;
         border-radius: 7px ;
         border: 1px solid black;
     }

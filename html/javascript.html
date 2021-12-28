@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/Css.css">
     <link rel="stylesheet" href="../css/javascript.css">
     <script src="../js/script.js" defer></script>
+    <script src="../js/css.js" defer></script>
     <script src="../js/javascript.js" defer></script>
     <title>javascript</title>
     <style>
@@ -114,15 +115,51 @@
             <div class="left-css1">
                 <h2>Javascript</h2>
                 <div class="table">
+<!--                    <ul>-->
+<!--                        <li class="js-functionen">-->
+<!--                            <a href="functionen.html">Functionen</a>-->
+<!--                        </li>-->
+<!--                        <li class="js-objekt">-->
+<!--                            <a href="Prototypen.html">Objekt</a>-->
+<!--                        </li>-->
+<!--                        <li class="js-fibo">-->
+<!--                            <a href="fibo.html">Fibonacci 1</a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+
                     <ul>
-                        <li class="js-functionen">
-                            <a href="functionen.html">Functionen</a>
+                        <li class="css-positionierung1">
+                            <button class="button1" onclick="document.getElementById('idpos1').style.display='block'"
+                                    style="width: auto;">Functionen</button>
+                            <div id="idpos1" class="csspos1">
+                                <div class="imgcontainer">
+                            <span onclick="document.getElementById('idpos1')
+                    .style.display='none'" class="close" title="Close Modal">&times;</span>
+                                    <iframe class="csspos1container animate" src="functionen.html" ></iframe>
+                                </div>
+                            </div>
                         </li>
-                        <li class="js-objekt">
-                            <a href="Prototypen.html">Objekt</a>
+                        <li class="css-positionierung2">
+                            <button class="button1"onclick="document.getElementById('idpos2').style.display='block'"
+                                    style="width: auto;">Objekt</button>
+                            <div id="idpos2" class="csspos1">
+                                <div class="imgcontainer">
+                            <span onclick="document.getElementById('idpos2')
+                    .style.display='none'" class="close" title="Close Modal">&times;</span>
+                                    <iframe class="csspos1container animate" src="Prototypen.html" ></iframe>
+                                </div>
+                            </div>
                         </li>
-                        <li class="js-fibo">
-                            <a href="fibo.html">Fibonacci 1</a>
+                        <li class="css-Wireframe">
+                            <button class="button1" onclick="document.getElementById('idwir').style.display='block'"
+                                    style="width: auto;">Fibonacci 1</button>
+                            <div id="idwir" class="csspos1">
+                                <div class="imgcontainer">
+                            <span onclick="document.getElementById('idwir')
+                    .style.display='none'" class="close" title="Close Modal">&times;</span>
+                                    <iframe class="csspos1container animate" src="fibo.html" title="übungcss wireframe"></iframe>
+                                </div>
+                            </div>
                         </li>
                     </ul>
 
@@ -132,11 +169,33 @@
                 <h2>Javascript</h2>
                 <div class="table">
                     <ul>
-                        <li class="js-fibo1">
-                            <a href="fibo1.html">Fibonacci 2</a>
+<!--                        <li class="js-fibo1">-->
+<!--                            <a href="fibo1.html">Fibonacci 2</a>-->
+<!--                        </li>-->
+<!--                        <li class="js-tpsort">-->
+<!--                            <a href="TopologischeSortierung.html">Topsort</a>-->
+<!--                        </li>-->
+                        <li class="css-flexbox">
+                            <button class="button1" onclick="document.getElementById('idrflex').style.display='block'"
+                                    style="width: auto;">Fibonacci 2</button>
+                            <div id="idrflex" class="csspos1">
+                                <div class="imgcontainer">
+                            <span onclick="document.getElementById('idrflex')
+                    .style.display='none'" class="close" title="Close Modal">&times;</span>
+                                    <iframe class="csspos1container animate" src="fibo1.html" ></iframe>
+                                </div>
+                            </div>
                         </li>
-                        <li class="js-tpsort">
-                            <a href="TopologischeSortierung.html">Topsort</a>
+                        <li class="css-grid1">
+                            <button class="button1" onclick="document.getElementById('idgrid').style.display='block'"
+                                    style="width: auto;">Topsort</button>
+                            <div id="idgrid" class="csspos1">
+                                <div class="imgcontainer">
+                            <span onclick="document.getElementById('idgrid')
+                    .style.display='none'" class="close" title="Close Modal">&times;</span>
+                                    <iframe class="csspos1container animate" src="TopologischeSortierung.html"></iframe>
+                                </div>
+                            </div>
                         </li>
                     </ul>
 
@@ -150,7 +209,6 @@
     <div id="AppFooter">
         <my-footer></my-footer>
     </div>
-
 </div>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 </body>

@@ -18,15 +18,3 @@ Vue.component('my-header',{
 new Vue({
     el: '#AppHeader'
 });
-// menue alle seite
-Vue.component('my-menu',{
-    template:'#vueMenu',
-    data:()=> {
-        return {
-            listmenu: ['CSS', 'JavaScript', 'DOM', 'Ecmascript', 'Functional', 'Async', 'SVG' , 'TypeScript','Vue','PHP','Security']
-        }
-    }
-});
-new Vue({
-    el: '#Appmenu'
-});

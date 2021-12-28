@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: #04a286;
+    }
+</style>
+<body>
+<h1>Funktionen in JavaScript</h1>
+<script>
+
+    // function identify
+    function identity_function(argument)
+    {
+        return identity(argument)
+    }
+    function identity(x)
+    {
+        return x;
+    }
+    //function add und mul
+    function add(x,y){
+        return x+y;
+    }
+
+    function mul(x,y){
+        return x*y;
+    }
+    console.log(identity_function(3));
+    document.write("identity_function(3) = "+identity_function(3)+"<br/><br/>")
+    // Addiert-function
+    function addf(x) {
+        return function(y) {
+            return x + y;
+        };
+    }
+    console.log(addf(3)(7));
+    document.write("addf(3)(7) = "+addf(3)(7)+"<br/><br/>")
+
+    //fuction applyf
+    function applyf(func) {
+        return function(x) {
+            return function(y) {
+                return func(x, y);
+            };
+        };
+    };
+    console.log(applyf(add)(4)(6));
+    document.write("applyf(add)(4)(6) = "+applyf(add)(4)(6)+"<br/><br/>");
+    console.log(applyf(mul)(4)(6));
+    document.write("applyf(mul)(4)(6) = "+applyf(mul)(4)(6)+"<br/><br/>");
+
+    //Function curry
+    function curry(func,x) {
+        return function (y){
+            return func(x,y);
+        }
+    }
+    console.log(curry(mul,5)(6));
+    document.write("curry(mul,5)(6) = "+curry(mul,5)(6)+"<br/><br/>");
+
+    //inc-Funktion
+    function in_function(x){
+        return add(x,1);
+    }
+    console.log(in_function(4));
+    document.write("in_function(4) = "+in_function(4)+"<br/><br/>");
+
+    //Function methodize
+    function methodize(funct) {
+        return function f(y){
+            return funct(this.valueOf() , y);
+        }
+    }
+    Number.prototype.add = methodize(add);
+    console.log((3).add(4));
+    document.write("(3).add(4) = "+(3).add(4)+"<br/><br/>");
+
+    // Function demethodize
+    function demethodize(funct){
+        return function(x,y){
+            return funct.bind(x)(y);
+        }
+    }
+    console.log(demethodize(Number.prototype.add)(5, 6));
+    document.write("Number.prototype.add)(5, 6) = "+demethodize(Number.prototype.add)(5, 6)+"<br/><br/>");
+
+    // Function twice
+    function twice(funct){
+        return (x)=>funct(x,x);
+    }
+    double = twice(add);
+    console.log(double(11));
+    document.write("double(11) = "+double(11)+"<br/><br/>");
+
+    // Function composeu
+    function composeu(functA, functB){
+        return (x)=>functB(functA(x));
+    }
+    console.log(composeu(double, double)(3));
+    document.write("composeu(double, double)(3) = "+composeu(double, double)(3)+"<br/><br/>");
+
+    // Function composeb
+    function composeb(functA, functB){
+        return (x, y, z)=>functB(functA(x,y), z);
+    }
+    console.log(composeb(add, mul)(2, 3, 5));
+    document.write("composeb(add, mul)(2, 3, 5) = "+composeb(add, mul)(2, 3, 5)+"<br/><br/>");
+
+    //Funktion once
+    function once(funct) {
+        let versucht = false;
+        return (x, y) => {
+            if (!versucht) {
+                versucht = true;
+                return funct(x, y);
+            }
+            else {
+                console.log("Warning: schon angerufen");
+            }
+        }
+    }
+    add_once = once(add);
+    // console.log(add_once(3, 4));
+    // console.log(add_once(3, 4));
+    document.write("versucht1 : add_once(3, 4) = "+add_once(3, 4)+"<br/><br/>");
+    document.write("versucht2 : add_once(3, 4) = "+add_once(3, 4)+"<br/><br/>");
+
+    // Function counterf
+    function counterf(x){
+        return {
+            inc: function () {
+                x = x+1;
+                return x;
+            },
+            dec: function () {
+                x = x -1;
+                return x;
+            },
+        }
+    }
+    counter = counterf(10);
+    // console.log(counter.inc());
+    // console.log(counter.dec());
+    document.write("counter.inc() = "+counter.inc()+"<br/><br/>");
+    document.write("counter.dec() = "+counter.dec()+"<br/><br/>");
+
+    //Array Wrapper
+    let vector = ()=> {
+        let arr = []
+        return {
+            get: (x) => {
+                return arr[x];
+            },
+            store: (x, y) => {
+                arr[x] = y;
+            },
+            append: (x) => {
+                arr.push(x);
+            }
+        }
+    }
+    my_vector = vector();
+    document.write("my_vector = vector();"+"<br/><br/>");
+    my_vector.append(7);
+    document.write("my_vector.append(7);"+"<br/><br/>");
+    my_vector.store(1, 8);
+    document.write("my_vector.store(1, 8);"+"<br/><br/>");
+    document.write("my_vector.get(0) = "+my_vector.get(0)+"<br/><br/>");
+    document.write("my_vector.get(1) = "+my_vector.get(1)+"<br/><br/>");
+    // my_vector.get(0) // 7
+    // my_vector.get(1) // 8
+
+    // Function revocable
+    function revocable(funct) {
+        return {
+            invoke: (...x) => {
+                return funct(...x);
+            },
+            revoke: () => {
+                this.invoke();
+                return console.log('already executed');
+            }
+        }
+    }
+    temp = revocable(alert);
+    temp.invoke(7); // führt zu alert(7);
+    document.write("temp.invoke(7) = "+temp.invoke(7)+"<br/><br/>");
+    temp.revoke();
+    document.write("temp.revoke() = "+temp.revoke()+"<br/><br/>");
+    temp.invoke(8); // Fehlerabbruch!
+    document.write("temp.invoke(8) = "+temp.invoke(8)+"<br/><br/>");
+</script>
+
+</body>
+</html>

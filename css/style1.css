@@ -155,18 +155,28 @@ nav li:hover a{
 
 .presentation1{
     display: grid;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     grid-template-columns: 50% 50% ;
     grid-template-rows:800px 300px 300px 400px 400px 400px;
     background-color: #008970;
     /*height: 530px;*/
 }
-/*.right{*/
-/*    !*float: left;*!*/
-/*    grid-column-start: 2;*/
-/*    grid-column-end: 3;*/
-/*}*/
+.leftall{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: none;
+}
+.rightall{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-right: 20px;
+    display: none;
+}
 .info{
     grid-column-start: 1;
     grid-column-end: 3;
@@ -238,6 +248,10 @@ nav li:hover a{
 #oben,#unten{
     cursor: pointer;
     color: white;
+    font-size: 30px;
+}
+#unten{
+    transform: rotate(180deg);
 }
 .overinfo{
     width: 0;
@@ -365,8 +379,8 @@ p{
 }
 .presentationcss{
     display: grid;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     grid-template-columns: 50% 50% ;
     grid-template-rows:300px 400px 300px 400px;
     background-color: #008970;
@@ -475,13 +489,12 @@ h2{
     position: absolute;
     right: 25px;
     top: 0;
-    color: #000;
+    color: red;
     font-size: 35px;
     font-weight: bold;
 }
 
 .close:hover{
-    color: red;
     cursor: pointer;
 }
 
@@ -498,18 +511,31 @@ h2{
     from {transform: scale(0)}
     to {transform: scale(1)}
 }
-@media screen and (max-width: 450px){
+@media screen and (max-width: 685px){
     .headtitle1{
         font-size: small;
     }
-
-}
-@media screen and (max-width: 650px){
-    .headtitle1{
-        font-size: x-large;
+    .imgcss,.imgjs,.imgdom{
+        width: 70%;
+        height: 200px;
+    }
+    .imgecm, .imgfunc{
+        width: 70%;
+        height: 150px;
+    }
+    .rightall{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-top: 260px;
     }
 
 }
+/*@media screen and (max-width: 650px){*/
+/*    .headtitle1{*/
+/*        font-size: x-large;*/
+/*    }*/
+
+/*}*/
 @media screen and (max-width: 1530px){
     .headtitle1{
         font-size: x-large;
@@ -539,7 +565,25 @@ h2{
     body{
         overflow-x: hidden;
     }
-
+    .presentation1{
+        grid-template-rows:500px 300px 300px 400px 400px 400px;
+    }
+    .buttonInfo{
+        display: none;
+    }
+    .leftall{
+        display: block;
+        z-index: 0;
+    }
+    .rightall{
+        display: block;
+        z-index: 0;
+    }
+    .imgall{
+        left: 0;
+        margin-left: 30px;
+        width: 350px;
+    }
     .topnav{
         position: fixed;
         right: 0;
@@ -561,9 +605,14 @@ h2{
     .topnav li{
         opacity: 0;
     }
-   .imgecm,.imgcss,.imgjs,.imgdom,.imgfunc{
-        display: none;
+   .imgcss,.imgjs,.imgdom{
+        width: 70%;
+       height: 260px;
     }
+   .imgecm, .imgfunc{
+       width: 70%;
+       height: 250px;
+   }
     nav ul li a{
         display: inline-block;
         text-decoration: none;

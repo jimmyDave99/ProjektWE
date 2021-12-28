@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="stylesheet" href="../css/Css.css">
+    <link rel="stylesheet" href="../css/domcss.css">
+<!--    <script src="../js/script.js" defer></script>-->
+    <script src="../js/dom.js" defer></script>
+    <title>Dom</title>
+    <style>
+        .menu-DOM{
+            background-color: #04a286;
+        }
+        .menu-DOM:hover{
+            background-color: #04a286;
+        }
+        @media screen and (max-width: 1080px){
+            .menu-DOM{
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="gesamt">
+    <header>
+        <a href="index.html" class="logoheader"><img src="../bilder/w-%20eng.png" alt="logo"></a>
+        <a href="index.html"><h1 class="headtitle1"><strong class="titleoben">Web Engineering</strong><br>
+            <strong class="headtitle">Darstellung von Übungsaufgaben</strong> </h1></a>
+    </header>
+    <nav>
+        <div class="menu-home">
+            <a class="active" href="index.html"><i class="fa fa-home"></i></a>
+        </div>
+
+        <ul class="topnav" id="topnav2">
+            <li class="menu-css">
+                <a href="../html/css.html">CSS</a>
+            </li>
+            <li class="menu-js">
+                <a href="../html/javascript.html">JavaScript</a>
+            </li>
+            <li class="menu-DOM">
+                <a href="../html/dom.html">DOM</a>
+            </li>
+            <li class="menu-ECMAScript">
+                <a href="../html/ecmascript.html">ECMAScript</a>
+            </li>
+            <li class="menu-functional">
+                <a href="../html/functional.html">Functional</a>
+            </li>
+            <li class="menu-Async">
+                <a href="../html/async.html">Async</a>
+            </li>
+            <li class="menu-SVG">
+                <a href="../html/svg.html">SVG</a>
+            </li>
+            <li class="menu-Vue">
+                <a href="../html/vue.html">Vue</a>
+            </li>
+            <li class="menu-php">
+                <a href="../html/php.html">PHP</a>
+            </li>
+            <li class="menu-Security">
+                <a href="../html/security.html">Security</a>
+            </li>
+        </ul>
+
+        <div class="menu-icon">
+            <div class="mi1"></div>
+            <div class="mi2"></div>
+            <div class="mi3"></div>
+        </div>
+    </nav>
+    <article>
+        <section class="presentationdom">
+
+            <div class="DOM-inhalt">
+                <svg id="svglogodom" width="350" height="119" viewBox="0 0 350 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M70.0759 108.897L70.0867 108.892C79.1596 104.398 86.134 97.938 90.9271 89.5228C95.8148 81.0205 98.2114 71.0853 98.2114 59.8062C98.2114 48.5298 95.816 38.5968 90.9307 30.0958C86.1431 21.585 79.1745 15.0724 70.1026 10.5752C61.1321 5.975 50.5814 3.72472 38.5339 3.72472H5H2.5V6.22472V112.928V115.428H5H38.5339C50.5721 115.428 61.1124 113.284 70.0759 108.897ZM68.4294 30.4804L68.4355 30.4866L68.4417 30.4928C75.2783 37.3596 78.8398 47.0173 78.8398 59.8062C78.8398 72.4943 75.3291 82.0458 68.6021 88.8074C61.901 95.442 52.0161 98.9466 38.5339 98.9466H21.5626V20.0534H38.5339C51.8926 20.0534 61.7219 23.6483 68.4294 30.4804ZM134.503 109.283L134.513 109.289L134.524 109.295C143.16 114.107 152.7 116.5 163.093 116.5C173.584 116.5 183.177 114.109 191.817 109.295L191.827 109.289L191.837 109.283C200.469 104.366 207.28 97.5641 212.24 88.9119C217.218 80.2284 219.68 70.4022 219.68 59.5C219.68 48.5978 217.218 38.7716 212.24 30.0881C207.28 21.4347 200.465 14.68 191.828 9.86418C183.187 4.94455 173.59 2.5 163.093 2.5C152.694 2.5 143.15 4.9468 134.513 9.86418C125.872 14.6817 119.011 21.487 113.951 30.2326L113.946 30.2412C108.97 38.921 106.506 48.6951 106.506 59.5C106.506 70.3052 108.97 80.1251 113.939 88.9004L113.948 88.9163L113.958 88.9321C119.019 97.5733 125.876 104.369 134.503 109.283ZM182.098 94.5297L182.09 94.5343L182.082 94.5389C176.521 97.7682 170.213 99.4059 163.093 99.4059C155.977 99.4059 149.613 97.7699 143.943 94.5348C138.395 91.3111 133.975 86.7123 130.68 80.6689C127.505 74.6573 125.878 67.6247 125.878 59.5C125.878 51.2631 127.509 44.2367 130.676 38.3383C133.973 32.2887 138.396 27.6862 143.95 24.4611C149.505 21.2348 155.864 19.5941 163.093 19.5941C170.323 19.5941 176.681 21.2348 182.236 24.4611C187.785 27.6833 192.151 32.2788 195.344 38.3175L195.355 38.3387L195.367 38.3596C198.63 44.2536 200.308 51.2719 200.308 59.5C200.308 67.6192 198.632 74.6462 195.359 80.6552L195.351 80.6688L195.344 80.6825C192.157 86.7101 187.747 91.3045 182.098 94.5297ZM347.5 6.99017V4.49017H345H330.01H328.396L327.732 5.9609L290.449 88.4853L253.167 5.9609L252.503 4.49017H250.889H235.745H233.245V6.99017V112.928V115.428H235.745H249.807H252.307V112.928V45.4045L283.225 113.956L283.889 115.428H285.504H295.395H297.011L297.674 113.954L328.437 45.5831V112.928V115.428H330.937H345H347.5V112.928V6.99017Z" stroke="#04A286" stroke-width="5"/>
+                </svg>
+
+            </div>
+
+            <div class="ubung-dom">
+                <h2>DOM</h2>
+                <div class="table">
+                    <ul>
+                        <li class="dom-permanzmessung">
+<!--                            <a href="performanzmessungen.html">Performanzmessung</a>-->
+                            <button type="button" class="collapsible">Performanzmessung</button>
+                            <div class="collapcontent">
+                                <iframe class="iframedom" src="performanzmessungen.html" title="übung performanzmessung"></iframe>
+                            </div>
+                        </li>
+                        <li class="rechnerliste">
+<!--                            <a href="Rechnerliste.html">Rechnerliste</a>-->
+                            <button type="button" class="collapsible">Rechnerliste</button>
+                            <div class="collapcontent">
+                                <iframe class="iframedom" src="rechnerliste.html" title="übung Rechnerliste"></iframe>
+                            </div>
+                        </li>
+                        <li class="dom-topsort">
+<!--                            <a href="TopSortu5_3a.html">TopSort als WebApp</a>-->
+                            <button type="button" class="collapsible">TopSort als WebApp</button>
+                            <div class="collapcontent">
+                                <iframe class="iframedom" src="TopSortu5_3a.html" title="übung TopSort als WebApp"></iframe>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bild-ubungdom">
+                <img class="imgubung" src="../bilder/bild%20Ubung.jpg" alt="bildubungcss">
+            </div>
+        </section>
+    </article>
+    <footer>
+        <p>Copyright 2021 Ziwo Tsajio Jimmy Dave</p>
+    </footer>
+
+</div>
+</body>
+</html>

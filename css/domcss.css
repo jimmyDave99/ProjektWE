@@ -1,7 +1,18 @@
+#svglogodom path:nth-child(1){
+    stroke-dasharray: 860px;
+    stroke-dashoffset: 650px;
+    animation: svg-anim 10s ease forwards ;
+}
+
+@keyframes svg-anim {
+    to {
+        stroke-dasharray: 0;
+    }
+}
 .presentationdom{
     display: grid;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     grid-template-columns: 50% 50% ;
     grid-template-rows:300px 600px 700px;
     background-color: #008970;
@@ -50,8 +61,23 @@
 }
 .imgubung{
     margin-top: 20px;
-    margin-left: 20%;
-    width: 60%;
+    margin-left: 35%;
+    width: 30%;
     border-radius: 7px ;
     border: 1px solid black;
+}
+@media screen and (max-width: 1080px){
+    #svglogodom path:nth-child(1){
+        stroke-dasharray: 0;
+    }
+    .presentationdom{
+        grid-template-rows:300px 600px 400px;
+    }
+    .imgubung{
+        margin-top: 70px;
+        margin-left: 20%;
+        width: 250px;
+        border-radius: 7px ;
+        border: 1px solid black;
+    }
 }
