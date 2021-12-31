@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/style1.css">
     <link rel="stylesheet" href="../css/Css.css">
     <link rel="stylesheet" href="../css/domcss.css">
-<!--    <script src="../js/script.js" defer></script>-->
+    <script src="../js/script.js" defer></script>
     <script src="../js/dom.js" defer></script>
     <title>Dom</title>
     <style>
@@ -28,12 +28,9 @@
     </style>
 </head>
 <body>
-<div class="gesamt">
-    <header>
-        <a href="index.html" class="logoheader"><img src="../bilder/w-%20eng.png" alt="logo"></a>
-        <a href="index.html"><h1 class="headtitle1"><strong class="titleoben">Web Engineering</strong><br>
-            <strong class="headtitle">Darstellung von Übungsaufgaben</strong> </h1></a>
-    </header>
+    <div class="gesamt"><div id="AppHeader">
+        <my-header></my-header>
+    </div>
     <nav>
         <div class="menu-home">
             <a class="active" href="index.html"><i class="fa fa-home"></i></a>
@@ -93,21 +90,18 @@
                 <div class="table">
                     <ul>
                         <li class="dom-permanzmessung">
-<!--                            <a href="performanzmessungen.html">Performanzmessung</a>-->
                             <button type="button" class="collapsible">Performanzmessung</button>
                             <div class="collapcontent">
                                 <iframe class="iframedom" src="performanzmessungen.html" title="übung performanzmessung"></iframe>
                             </div>
                         </li>
                         <li class="rechnerliste">
-<!--                            <a href="Rechnerliste.html">Rechnerliste</a>-->
                             <button type="button" class="collapsible">Rechnerliste</button>
                             <div class="collapcontent">
                                 <iframe class="iframedom" src="rechnerliste.html" title="übung Rechnerliste"></iframe>
                             </div>
                         </li>
                         <li class="dom-topsort">
-<!--                            <a href="TopSortu5_3a.html">TopSort als WebApp</a>-->
                             <button type="button" class="collapsible">TopSort als WebApp</button>
                             <div class="collapcontent">
                                 <iframe class="iframedom" src="TopSortu5_3a.html" title="übung TopSort als WebApp"></iframe>
@@ -121,10 +115,9 @@
             </div>
         </section>
     </article>
-    <footer>
-        <p>Copyright 2021 Ziwo Tsajio Jimmy Dave</p>
-    </footer>
-
+        <div id="AppFooter">
+            <my-footer></my-footer>
+        </div>
 </div>
 </body>
 </html>

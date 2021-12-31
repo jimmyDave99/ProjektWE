@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="stylesheet" href="../css/Css.css">
+    <link rel="stylesheet" href="../css/domcss.css">
+    <script src="../js/script.js" defer></script>
+    <script src="../js/dom.js" defer></script>
+    <title>Dom</title>
+    <style>
+        .menu-SVG{
+            background-color: #04a286;
+        }
+        .menu-SVG:hover{
+            background-color: #04a286;
+        }
+        @media screen and (max-width: 1080px){
+            .menu-SVG{
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="gesamt">
+    <div id="AppHeader">
+        <my-header></my-header>
+    </div>
+    <nav>
+        <div class="menu-home">
+            <a class="active" href="index.html"><i class="fa fa-home"></i></a>
+        </div>
+
+        <ul class="topnav" id="topnav2">
+            <li class="menu-css">
+                <a href="../html/css.html">CSS</a>
+            </li>
+            <li class="menu-js">
+                <a href="../html/javascript.html">JavaScript</a>
+            </li>
+            <li class="menu-DOM">
+                <a href="../html/dom.html">DOM</a>
+            </li>
+            <li class="menu-ECMAScript">
+                <a href="../html/ecmascript.html">ECMAScript</a>
+            </li>
+            <li class="menu-functional">
+                <a href="../html/functional.html">Functional</a>
+            </li>
+            <li class="menu-Async">
+                <a href="../html/async.html">Async</a>
+            </li>
+            <li class="menu-SVG">
+                <a href="../html/svg.html">SVG</a>
+            </li>
+            <li class="menu-Vue">
+                <a href="../html/vue.html">Vue</a>
+            </li>
+            <li class="menu-php">
+                <a href="../html/php.html">PHP</a>
+            </li>
+            <li class="menu-Security">
+                <a href="../html/security.html">Security</a>
+            </li>
+        </ul>
+
+        <div class="menu-icon">
+            <div class="mi1"></div>
+            <div class="mi2"></div>
+            <div class="mi3"></div>
+        </div>
+    </nav>
+    <article>
+        <section class="presentationdom">
+
+            <div class="DOM-inhalt">
+                <svg id="svglogodom" width="339" height="178" viewBox="0 0 339 178" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.2653 126.111L24.2909 126.123L24.3168 126.135C30.7499 129.063 37.9472 130.5 45.8625 130.5C54.1438 130.5 61.4665 128.819 67.7446 125.359C73.9409 121.945 78.7062 117.44 81.9375 111.823C85.1288 106.276 86.7364 100.326 86.7364 94.0154C86.7364 86.0925 85.0129 79.5206 81.277 74.5779C77.746 69.7943 73.4577 66.2313 68.4091 63.9695C63.6137 61.7093 57.3625 59.4851 49.7011 57.2846C43.475 55.4618 38.666 53.8822 35.2415 52.5455C32.1816 51.1999 29.5812 49.3026 27.415 46.8443C25.5644 44.6274 24.5443 41.6771 24.5443 37.777C24.5443 32.2763 26.3042 28.3201 29.607 25.5452L29.623 25.5318L29.6388 25.5181C33.0684 22.5373 37.5754 20.9558 43.3815 20.9558C49.6545 20.9558 54.4242 22.6086 57.9461 25.6862L57.9613 25.6995L57.9768 25.7126C61.6535 28.8217 63.5912 32.3001 64.0559 36.1769L64.3198 38.3794H66.5381H83.0786H85.8265L85.5674 35.6437C84.6256 25.6976 80.4071 17.5964 72.9174 11.5176C65.5418 5.44143 56.1209 2.5 44.8701 2.5C37.0615 2.5 30.0161 3.9385 23.7885 6.87968L23.7801 6.88363L23.7718 6.88764C17.6434 9.83764 12.8091 14.0537 9.34498 19.5354C5.87078 25.0331 4.16162 31.313 4.16162 38.2945C4.16162 46.108 5.83195 52.6505 9.42275 57.6869L9.44348 57.716L9.46503 57.7445C12.9965 62.4099 17.2271 65.91 22.1613 68.1693L22.1716 68.174L22.1819 68.1786C26.9748 70.321 33.2277 72.4296 40.8964 74.5164C47.0246 76.2285 51.8242 77.8077 55.3329 79.2493C58.6175 80.5989 61.3148 82.5508 63.4695 85.1045C65.4353 87.4343 66.5192 90.5588 66.5192 94.7055C66.5192 99.8946 64.7009 104.041 61.056 107.343C57.5612 110.494 52.6025 112.217 45.8625 112.217C38.7868 112.217 33.7703 110.435 30.414 107.242C26.9864 103.758 25.0285 99.5331 24.5324 94.462L24.3116 92.2055H22.0443H6H3.45759L3.50035 94.7475C3.61814 101.75 5.51164 108.037 9.22133 113.528L9.22882 113.54L9.23644 113.551C12.9248 118.886 17.9612 123.067 24.2653 126.111ZM204.01 7.40312L205.223 4.0526H201.659H185.781H184.006L183.421 5.72802L149.557 102.652L115.694 5.72802L115.108 4.0526H113.333H97.2891H93.7261L94.9383 7.40312L138.44 127.643L139.036 129.292H140.791H158.158H159.912L160.509 127.643L204.01 7.40312ZM303.223 42.4366L303.889 43.8997H305.497H323.527H327.13L325.868 40.5241C321.4 28.574 314.195 19.2237 304.244 12.5844C294.425 5.95971 283.124 2.67251 270.432 2.67251C259.306 2.67251 249.103 5.42914 239.88 10.9578C230.653 16.373 223.344 24.0123 217.958 33.8128L217.953 33.8213C212.66 43.5414 210.04 54.483 210.04 66.5863C210.04 78.6895 212.66 89.6311 217.953 99.3512L217.958 99.3612L217.964 99.3711C223.352 109.055 230.658 116.684 239.869 122.209L239.88 122.215L239.89 122.221C249.113 127.632 259.312 130.327 270.432 130.327C280.981 130.327 290.62 127.871 299.292 122.926L299.304 122.92L299.315 122.913C307.938 117.877 314.905 111.09 320.192 102.58L320.196 102.573L320.2 102.567C325.478 93.9499 328.575 84.492 329.49 74.2263L329.5 74.1155V74.0042V61.9285V59.4285H327H264.973H262.473V61.9285V74.6943V77.1943H264.973H308.127C306.627 87.3626 302.708 95.3596 296.485 101.359C289.727 107.873 281.111 111.182 270.432 111.182C262.802 111.182 255.972 109.391 249.88 105.842C243.913 102.188 239.151 97.0252 235.601 90.278C232.176 83.56 230.423 75.6859 230.423 66.5863C230.423 57.4832 232.177 49.6067 235.605 42.8869C239.16 36.0186 243.921 30.8662 249.874 27.3337L249.886 27.3265C255.979 23.6643 262.807 21.8184 270.432 21.8184C278.058 21.8184 284.633 23.6645 290.249 27.2849L290.263 27.294L290.277 27.303C295.894 30.8179 300.212 35.8309 303.223 42.4366Z" stroke="#04A286" stroke-width="5"/>
+                </svg>
+
+            </div>
+
+            <div class="ubung-dom">
+                <h2>SVG</h2>
+                <div class="table">
+                    <ul>
+                        <li class="dom-permanzmessung">
+                            <button type="button" class="collapsible">SVG Grafik</button>
+                            <div class="collapcontent">
+                                <iframe class="iframedom" src="../übung/ubung9/svgGrafik.html"></iframe>
+                            </div>
+                        </li>
+                        <li class="rechnerliste">
+                            <button type="button" class="collapsible">Balkendiagramm</button>
+                            <div class="collapcontent">
+                                <iframe class="iframedom" src="../übung/ubung9/balkendiagramm.html"></iframe>
+                            </div>
+                        </li>
+                        <li class="dom-topsort">
+                            <button type="button" class="collapsible">Interaktive SVG</button>
+                            <div class="collapcontent">
+                                <iframe class="iframedom" src="../übung/ubung9/ubung9.3.html"></iframe>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bild-ubungdom">
+                <img class="imgubung" src="../bilder/bild%20Ubung.jpg" alt="bildubungcss">
+            </div>
+        </section>
+    </article>
+    <div id="AppFooter">
+        <my-footer></my-footer>
+    </div>
+</div>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</body>
+</html>

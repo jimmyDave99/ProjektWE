@@ -8,7 +8,7 @@
 #svglogo path:nth-child(1){
     stroke-dasharray: 560px;
     stroke-dashoffset: 550px;
-    animation: svg-anim 3s ease forwards ;
+    animation: svg-anim 5s ease forwards ;
 }
 
 @keyframes svg-anim {

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="stylesheet" href="../css/Css.css">
+    <link rel="stylesheet" href="../css/domcss.css">
+    <script src="../js/script.js" defer></script>
+    <script src="../js/dom.js" defer></script>
+    <title>Dom</title>
+    <style>
+        .menu-Vue{
+            background-color: #04a286;
+        }
+        .menu-Vue:hover{
+            background-color: #04a286;
+        }
+        @media screen and (max-width: 1080px){
+            .menu-Vue{
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="gesamt">
+    <div id="AppHeader">
+        <my-header></my-header>
+    </div>
+    <nav>
+        <div class="menu-home">
+            <a class="active" href="index.html"><i class="fa fa-home"></i></a>
+        </div>
+
+        <ul class="topnav" id="topnav2">
+            <li class="menu-css">
+                <a href="../html/css.html">CSS</a>
+            </li>
+            <li class="menu-js">
+                <a href="../html/javascript.html">JavaScript</a>
+            </li>
+            <li class="menu-DOM">
+                <a href="../html/dom.html">DOM</a>
+            </li>
+            <li class="menu-ECMAScript">
+                <a href="../html/ecmascript.html">ECMAScript</a>
+            </li>
+            <li class="menu-functional">
+                <a href="../html/functional.html">Functional</a>
+            </li>
+            <li class="menu-Async">
+                <a href="../html/async.html">Async</a>
+            </li>
+            <li class="menu-SVG">
+                <a href="../html/svg.html">SVG</a>
+            </li>
+            <li class="menu-Vue">
+                <a href="../html/vue.html">Vue</a>
+            </li>
+            <li class="menu-php">
+                <a href="../html/php.html">PHP</a>
+            </li>
+            <li class="menu-Security">
+                <a href="../html/security.html">Security</a>
+            </li>
+        </ul>
+
+        <div class="menu-icon">
+            <div class="mi1"></div>
+            <div class="mi2"></div>
+            <div class="mi3"></div>
+        </div>
+    </nav>
+    <article>
+        <section class="presentationdom">
+
+            <div class="DOM-inhalt">
+                <svg id="svglogodom" width="339" height="178" viewBox="0 0 339 178" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M125.282 5.93637L126.212 2.73829H122.882H105.251H103.357L102.844 4.56238L65.0326 139.209L27.2207 4.56238L26.7084 2.73829H24.8138H7H3.66945L4.59944 5.93637L52.8987 172.03L53.4227 173.832H55.2993H74.5823H76.4588L76.9828 172.03L125.282 5.93637ZM160.051 5.23829V2.73829H157.551H140.839H138.339V5.23829V110.089C138.339 124.148 140.454 136.187 144.792 146.12L144.8 146.139L144.809 146.159C149.253 155.88 155.296 163.282 163.001 168.197L163.009 168.202L163.017 168.207C170.78 173.076 179.447 175.5 188.954 175.5C198.459 175.5 207.069 173.077 214.715 168.203C222.544 163.29 228.652 155.887 233.1 146.159L233.103 146.151L233.106 146.144C237.575 136.204 239.754 124.156 239.754 110.089V5.23829V2.73829H237.254H220.542H218.042V5.23829V110.328C218.042 124.865 215.257 135.158 210.13 141.666L210.122 141.676L210.114 141.687C205.122 148.164 198.233 151.436 189.138 151.436C179.913 151.436 172.897 148.157 167.787 141.676C162.775 135.165 160.051 124.866 160.051 110.328V5.23829ZM330.991 78.3957V75.8957H328.491H284.344V25.3723H334H336.5V22.8723V5V2.5H334H265.132H262.632V5V171.332V173.832H265.132H334H336.5V171.332V153.46V150.96H334H284.344V98.7681H328.491H330.991V96.2681V78.3957Z" stroke="#04A286" stroke-width="5"/>
+                </svg>
+
+            </div>
+
+            <div class="ubung-dom">
+                <h2>VUE</h2>
+                <div class="table">
+                    <ul>
+                        <li class="dom-permanzmessung">
+                            <button type="button" class="collapsible">Komponente in Vue</button>
+                            <div class="collapcontent">
+                                <iframe class="iframedom" src="../übung/ubung11/ubung11.1/kompo.html"></iframe>
+                            </div>
+                        </li>
+                        <li class="rechnerliste">
+                            <button type="button" class="collapsible">Menü-Komponente</button>
+                            <div class="collapcontent">
+                                <iframe class="iframedom" src="../übung/ubung11/ubung11.2/menu_Komponent.html"></iframe>
+                            </div>
+                        </li>
+                        <li class="dom-topsort">
+                            <button type="button" class="collapsible">WWW-Navigator(todo)</button>
+                            <div class="collapcontent">
+                                <iframe class="iframedom" src="" ></iframe>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bild-ubungdom">
+                <img class="imgubung" src="../bilder/bild%20Ubung.jpg" alt="bildubungcss">
+            </div>
+        </section>
+    </article>
+    <div id="AppFooter">
+        <my-footer></my-footer>
+    </div>
+</div>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</body>
+</html>

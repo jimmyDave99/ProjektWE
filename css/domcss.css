@@ -1,10 +1,10 @@
 #svglogodom path:nth-child(1){
-    stroke-dasharray: 860px;
-    stroke-dashoffset: 650px;
-    animation: svg-anim 10s ease forwards ;
+    stroke-dasharray: 560px;
+    stroke-dashoffset: 550px;
+    animation: svg-anim2 10s ease forwards ;
 }
 
-@keyframes svg-anim {
+@keyframes svg-anim2 {
     to {
         stroke-dasharray: 0;
     }
@@ -33,6 +33,7 @@
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 3 ;
+    z-index: 0;
 }
 .collapsible:hover{
     background-color: rgba(0,0,0,0.3);
@@ -47,13 +48,15 @@
     text-align: left;
     outline: none;
     font-size: 20px;
+
 }
 .collapcontent{
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #04a286;
     width: 90.7%;
+    z-index: 7;
 }
 .iframedom{
     width: 100%;
@@ -65,6 +68,7 @@
     width: 30%;
     border-radius: 7px ;
     border: 1px solid black;
+    z-index: 0;
 }
 @media screen and (max-width: 1080px){
     #svglogodom path:nth-child(1){
@@ -77,7 +81,6 @@
         margin-top: 70px;
         margin-left: 20%;
         width: 250px;
-        border-radius: 7px ;
-        border: 1px solid black;
+        z-index: 0;
     }
 }
