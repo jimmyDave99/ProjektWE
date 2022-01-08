@@ -31,9 +31,10 @@
         getData();
     </script>
     <style>
-        body{
-            padding: 0;
+        *{
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
         }
         header{
             background-color: #c24f4f;
@@ -46,8 +47,6 @@
         .content{
             display: grid;
             grid-template-columns: 20% 60% 20%;
-            grid-template-rows: auto;
-            /*height: 500px;*/
             padding: 0;
             margin: 0;
         }
@@ -73,16 +72,12 @@
             grid-column-end: 4;
             grid-row-start: 1;
             grid-row-end: 2;
+            color: white;
         }
         .footer{
             background-color: black;
             height: 50px;
             width: 100%;
-            padding: 0;
-            margin: 0;
-        }
-        .ref{
-            color: white;
         }
         .pfooter{
             text-align: center;
@@ -130,7 +125,6 @@
         </p>
     </div>
 
-    </div>
     <div class="ref">
         <p>
             <span id="Html_ref"> </span>
@@ -155,6 +149,5 @@
 <footer class="footer">
     <p class="pfooter"><span class="ft">Footer:</span> Sitemap Home News Contact About</p>
 </footer>
-</div>
 </body>
 </html>
