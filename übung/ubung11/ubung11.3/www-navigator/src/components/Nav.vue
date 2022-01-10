@@ -1,4 +1,4 @@
-<template>
+<template @load="getData">
   <nav class="content">
     <div class="menu"></div>
     <div class="docu">
@@ -56,44 +56,36 @@
 
 <script>
 export default {
-  name: "Nav",
-  data: function (){
+  name: 'Nav',
+  data: function () {
     return {
-      url : 'nav.json'
+      url: 'nav.json'
     }
   },
-  methods: {
-    async  getData(){
-      const response = await fetch(this.url);
-      const data = await response.json();
-      //const {html}= data;
 
-      document.getElementById('Htmlcontent').textContent=data['html']['headings']['content'];
-      document.getElementById('Html_ref').textContent=data['html']['headings']['references'];
-      document.getElementById('parcontent').textContent=data['html']['paragraph']['content'];
-      document.getElementById('pararef').textContent=data['html']['paragraph']['references'];
-      document.getElementById('seleccontent').textContent=data['css']['selectors']['content'];
-      document.getElementById('selecref').textContent=data['css']['selectors']['references'];
-      document.getElementById('colorcontent').textContent=data['css']['colors']['content'];
-      document.getElementById('colorref').textContent=data['css']['colors']['references'];
-      document.getElementById('funccontent').textContent=data['javascript']['function']['content'];
-      document.getElementById('funcref').textContent=data['javascript']['function']['references'];
-      document.getElementById('objectcontent').textContent=data['javascript']['object']['content'];
-      document.getElementById('objectref').textContent=data['javascript']['object']['references'];
-      console.log(data);
-    }
+  async getData(){
+    fetch(this.url)
+        .then(response => response.json())
+        .then(data => (
+            document.getElementById('Htmlcontent').textContent=data['html']['headings']['content']
+        ))
+        .catch(function (error) {
+          console.error('Request failed ', error);
+        });
   }
+
 }
 </script>
 
 <style scoped>
-.content{
+.content {
   display: grid;
   grid-template-columns: 20% 60% 20%;
   padding: 0;
   margin: 0;
 }
-.menu{
+
+.menu {
   background-color: #c28283;
   grid-column-start: 1;
   grid-column-end: 2;
@@ -102,14 +94,16 @@ export default {
   padding: 0;
   margin: 0;
 }
-.docu{
+
+.docu {
   background-color: #95d2f4;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
 }
-.ref{
+
+.ref {
   background-color: #c28283;
   grid-column-start: 3;
   grid-column-end: 4;

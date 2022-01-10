@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    header{
+        background-color: #c24f4f;
+        height: 100px;
+        color: white;
+    }
+    h1{
+        text-align: center;
+    }
+    textarea { margin: 1rem; display: block; width: 80vw; height: 20vh; }
+    input { margin: 1rem; }
+
+    .footer{
+        background-color: black;
+        height: 50px;
+        width: 100%;
+    }
+    .pfooter{
+        text-align: center;
+        color: white;
+
+    }
+    .ft{
+        font-size: 20px;
+    }
+</style>
+<body>
+<header>
+    <h1> WWW-Navigator</h1>
+</header>
+<h1>Fill with contents</h1>
+<form method="post">
+    <fieldset>
+        <legend>Select content area and add a new text:</legend>
+        <select name="top_header">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+        </select>
+        <select name="sub_header">
+        </select>
+        <textarea name="content"></textarea>
+        <input type="submit" value="Submit">
+    </fieldset>
+</form>
+<footer class="footer">
+    <p class="pfooter"><span class="ft">Footer:</span> Sitemap Home News Contact About</p>
+</footer>
+</body>
+</html>
