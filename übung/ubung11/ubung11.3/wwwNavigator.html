@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>WWW-Navigator</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: #c24f4f;
+            height: 100px;
+            color: white;
+        }
+        h1{
+            text-align: center;
+        }
+        .content{
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            padding: 0;
+            margin: 0;
+        }
+        .menu{
+            background-color: #c28283;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            padding: 0;
+            margin: 0;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+        }
+        .docu{
+            background-color: #95d2f4;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .ref{
+            background-color: #c28283;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            color: white;
+        }
+        .footer{
+            background-color: black;
+            height: 50px;
+            width: 100%;
+        }
+        .pfooter{
+            text-align: center;
+            color: white;
+
+        }
+        .ft{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="AppHeader">
+    <my-header></my-header>
+</div>
+<nav class="content">
+    <div class="menu">
+        <div id="App">
+            <vue-menu style="display: grid"></vue-menu>
+        </div>
+
+    </div>
+    <div class="docu">
+        <h2>html</h2>
+        <h3>headings</h3>
+        <p>
+            <span id="Htmlcontent"> </span>
+        </p>
+        <h3>Paragraph</h3>
+        <p>
+            <span id="parcontent"> </span>
+        </p>
+        <h2>css</h2>
+        <h3>selectors</h3>
+        <p>
+            <span id="seleccontent"> </span>
+        </p>
+        <h3>colors</h3>
+        <p>
+            <span id="colorcontent"> </span>
+        </p>
+        <h2>Javascript</h2>
+        <h3>function</h3>
+        <p>
+            <span id="funccontent"> </span>
+        </p>
+        <h3>object</h3>
+        <p>
+            <span id="objectcontent"> </span>
+        </p>
+    </div>
+
+    <div class="ref">
+        <p>
+            <span id="Html_ref"> </span>
+        </p>
+        <p>
+            <span id="pararef"> </span>
+        </p>
+        <p>
+            <span id="selecref"> </span>
+        </p>
+        <p>
+            <span id="colorref"> </span>
+        </p>
+        <p>
+            <span id="funcref"> </span>
+        </p>
+        <p>
+            <span id="objectref"> </span>
+        </p>
+    </div>
+</nav>
+<div id="AppFooter">
+    <my-footer></my-footer>
+</div>
+<script type="text/x-template" id="vmenue">
+    <div >
+        <button
+                v-for="elt in listmenu"
+        >{{elt}}</button>
+    </div>
+</script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="navigator.js"></script>
+</body>
+</html>

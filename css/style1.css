@@ -114,7 +114,7 @@ article li{
     list-style-type: none;
     /*float: left;*/
 }
-.titlejs, .titlecss, .titledom,.titleecm,.titlefunc{
+.titlejs, .titlecss, .titledom,.titleecm,.titlefunc, .titleasync, .titlesvg, .titlevue{
     font-size: 30px;
     text-align: Center;
 }
@@ -131,13 +131,6 @@ article li{
     overflow: hidden;
 
 }
-/*.icon {*/
-/*    display: none;*/
-/*    padding: 20px 30px;*/
-/*    color: #fff;*/
-/*    font-size: 25px;*/
-/*}*/
-
 .menu-js:hover,.menu-css:hover,.menu-home:hover,
 .menu-php:hover,.menu-DOM:hover,.menu-ECMAScript:hover,.menu-functional:hover,.menu-Async:hover,.menu-SVG:hover,
 .menu-Vue:hover,.menu-Security:hover{
@@ -158,7 +151,7 @@ nav li:hover a{
     padding: 0;
     margin: 0;
     grid-template-columns: 50% 50% ;
-    grid-template-rows:800px 300px 300px 400px 400px 400px;
+    grid-template-rows:800px 300px 300px 400px 400px 400px 400px 400px 400px;
     background-color: #008970;
     /*height: 530px;*/
 }
@@ -264,7 +257,7 @@ nav li:hover a{
     margin-left: 50%;
     position: absolute;
 }
-.left-css{
+.left-css,.left-js,.left-dom,.left-ecm,.left-func,.left-async,.left-svg,.left-vue{
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
@@ -285,10 +278,7 @@ nav li:hover a{
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 2;
-    box-shadow: 10px 5px 5px black;
-    background-color: #04a286;
-    margin-left: 30px;
-    margin-top: 30px;
+
 }
 .right-js{
     grid-row-start: 3;
@@ -301,11 +291,6 @@ nav li:hover a{
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
-    box-shadow: 10px 5px 5px black;
-    background-color: #04a286;
-    margin-left: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
 .right-dom{
     grid-row-start: 4;
@@ -318,11 +303,6 @@ nav li:hover a{
     grid-row-end: 6;
     grid-column-start: 1;
     grid-column-end: 2;
-    box-shadow: 10px 5px 5px black;
-    background-color: #04a286;
-    margin-left: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
 .right-ecm{
     grid-row-start: 5;
@@ -335,11 +315,6 @@ nav li:hover a{
     grid-row-end: 7;
     grid-column-start: 1;
     grid-column-end: 2;
-    box-shadow: 10px 5px 5px black;
-    background-color: #04a286;
-    margin-left: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
 .right-func{
     grid-row-start: 6;
@@ -347,10 +322,46 @@ nav li:hover a{
     grid-column-start: 2;
     grid-column-end: 3;
 }
+.left-async{
+    grid-row-start: 7;
+    grid-row-end: 8;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.right-async{
+    grid-row-start: 7;
+    grid-row-end: 8;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.left-svg{
+    grid-row-start: 8;
+    grid-row-end: 9;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.right-svg{
+    grid-row-start: 8;
+    grid-row-end: 9;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.left-vue{
+    grid-row-start: 9;
+    grid-row-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.right-vue{
+    grid-row-start: 9;
+    grid-row-end: 10;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
 p{
     margin-left: 30px;
 }
-.imgecm,.imgfunc{
+.imgecm,.imgfunc,.imgasync, .imgsvg, .imgvue{
     display: block;
     margin-top: 50px;
     margin-left: 50px;
@@ -360,6 +371,9 @@ p{
 }
 .imgecm{
     width: 60%;
+}
+.imgsvg{
+    width: 40%;
 }
 .imgcss,.imgjs{
     display: block;
@@ -515,11 +529,11 @@ h2{
     .headtitle1{
         font-size: small;
     }
-    .imgcss,.imgjs,.imgdom{
+    .imgcss,.imgjs,.imgdom,.imgsvg{
         width: 70%;
         height: 200px;
     }
-    .imgecm, .imgfunc{
+    .imgecm, .imgfunc, .imgasync{
         width: 70%;
         height: 150px;
     }
@@ -566,7 +580,7 @@ h2{
         overflow-x: hidden;
     }
     .presentation1{
-        grid-template-rows:500px 300px 300px 400px 400px 400px;
+        grid-template-rows:500px 300px 300px 400px 400px 400px 400px 400px 400px;
     }
     .buttonInfo{
         display: none;
@@ -609,7 +623,7 @@ h2{
         width: 70%;
        height: 260px;
     }
-   .imgecm, .imgfunc{
+   .imgecm, .imgfunc, .imgasync,.imgvue{
        width: 70%;
        height: 250px;
    }

@@ -1,7 +1,7 @@
 
 // Footer alle seite
 Vue.component('my-footer',{
-    template:'<footer><p>Copyright 2021 Ziwo Tsajio Jimmy Dave</p></footer>'
+    template:'<footer><p> © Copyright 2021 Ziwo Tsajio Jimmy Dave</p></footer>'
 });
 new Vue({
     el: '#AppFooter'
