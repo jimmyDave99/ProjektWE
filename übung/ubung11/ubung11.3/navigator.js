@@ -36,7 +36,7 @@ async  function getData(){
     const response = await fetch(url);
     const data = await response.json();
 
-   this.listmenu[0]= document.getElementById('Htmlcontent').textContent=data['html']['headings']['content'];
+    document.getElementById('Htmlcontent').textContent=data['html']['headings']['content'];
     document.getElementById('Html_ref').textContent=data['html']['headings']['references'];
     document.getElementById('parcontent').textContent=data['html']['paragraph']['content'];
     document.getElementById('pararef').textContent=data['html']['paragraph']['references'];
