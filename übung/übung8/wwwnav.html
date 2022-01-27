@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../../../js/dom.js" defer></script>
     <title>WWW-Navigator</title>
     <script>
 
@@ -49,6 +50,7 @@
             grid-template-columns: 20% 60% 20%;
             padding: 0;
             margin: 0;
+            height: 500px;
         }
         .menu{
             background-color: #c28283;
@@ -58,6 +60,17 @@
             grid-row-end: 2;
             padding: 0;
             margin: 0;
+        }
+        .collapsible{
+            text-align: center;
+            width: 200px;
+            height: 50px;
+            display: grid;
+            padding-top: 10px;
+
+        }
+        .collapcontent{
+            display: none;
         }
         .docu{
             background-color: #95d2f4;
@@ -96,33 +109,45 @@
 <nav class="content">
     <div class="menu"></div>
     <div class="docu">
-        <h2>html</h2>
-        <h3>headings</h3>
-        <p>
-            <span id="Htmlcontent"> </span>
-        </p>
-        <h3>Paragraph</h3>
-        <p>
-            <span id="parcontent"> </span>
-        </p>
-        <h2>css</h2>
-        <h3>selectors</h3>
-        <p>
-            <span id="seleccontent"> </span>
-        </p>
-        <h3>colors</h3>
-        <p>
-            <span id="colorcontent"> </span>
-        </p>
-        <h2>Javascript</h2>
-        <h3>function</h3>
-        <p>
-            <span id="funccontent"> </span>
-        </p>
-        <h3>object</h3>
-        <p>
-            <span id="objectcontent"> </span>
-        </p>
+        <button type="button" class="collapsible">HTML</button>
+        <div class="collapcontent">
+            <h2>html</h2>
+            <h3>headings</h3>
+            <p>
+                <span id="Htmlcontent"> </span>
+            </p>
+            <h3>Paragraph</h3>
+            <p>
+                <span id="parcontent"> </span>
+            </p>
+        </div>
+        <button type="button" class="collapsible">CSS</button>
+        <div class="collapcontent">
+            <h2>css</h2>
+            <h3>selectors</h3>
+            <p>
+                <span id="seleccontent"> </span>
+            </p>
+            <h3>colors</h3>
+            <p>
+                <span id="colorcontent"> </span>
+            </p>
+        </div>
+
+        <button type="button" class="collapsible">JavaScript</button>
+        <div class="collapcontent">
+            <h2>Javascript</h2>
+            <h3>function</h3>
+            <p>
+                <span id="funccontent"> </span>
+            </p>
+            <h3>object</h3>
+            <p>
+                <span id="objectcontent"> </span>
+            </p>
+        </div>
+
+
     </div>
 
     <div class="ref">
