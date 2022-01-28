@@ -4,57 +4,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style1.css">
-    <title>mein Webseite</title>
+    <link rel="stylesheet" href="../css/Css.css">
+    <script src="../js/script.js" defer></script>
+    <script src="../js/css.js" defer></script>
+    <title>PHP</title>
+    <style>
+        .menu-php{
+            background-color: #04a286;
+        }
+        .menu-php:hover{
+            background-color: #04a286;
+        }
+        .right-css1 {
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            margin-left: 60px;
+            margin-right: 60px;
+            height: 600px;
+        }
+        iframe{
+            width: 90%;
+            height: 90%;
+            margin-left: 20px;
+        }
+        .right-css1 a{
+            color: #c24f4f;
+        }
+        @media screen and (max-width: 1080px){
+            .menu-php{
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
 <div class="gesamt">
-    <header>
-        <a href="index.html" class="logoheader"><img src="../w-%20eng.png" alt="logo"></a>
-        <a href="index.html"><h1 class="headtitle1"><strong class="titleoben">Web Engineering</strong><br>
-            <strong class="headtitle">Darstellung von Übungsaufgaben</strong> </h1></a>
-    </header>
+    <div id="AppHeader">
+        <my-header></my-header>
+    </div>
     <nav>
-        <div class="table">
-            <ul>
-                <li class="menu-css">
-                    <a href="css.html">CSS</a>
-                </li>
-                <li class="menu-js">
-                    <a href="javascript.html">JavaScript</a>
-                </li>
-                <li class="menu-DOM">
-                    <a href="DOM.html">DOM</a>
-                </li>
-                <li class="menu-ECMAScript">
-                    <a href="ECMAScript.html">ECMAScript</a>
-                </li>
-                <li class="menu-functional">
-                    <a href="functional.html">Functional</a>
-                </li>
-                <li class="menu-Async">
-                    <a href="async.html">Async</a>
-                </li>
-                <li class="menu-SVG">
-                    <a href="svg.html">SVG</a>
-                </li>
-                <li class="menu-Vue">
-                    <a href="vue.html">Vue</a>
-                </li>
-                <li class="menu-php">
-                    <a href="php.html">PHP</a>
-                </li>
-                <li class="menu-Security">
-                    <a href="security.html">Security</a>
-                </li>
-            </ul>
+        <div class="menu-home">
+            <a class="active" href="index.html"><i class="fa fa-home"></i></a>
+        </div>
+
+        <ul class="topnav" id="topnav2">
+            <li class="menu-css">
+                <a href="../html/css.html">CSS</a>
+            </li>
+            <li class="menu-js">
+                <a href="../html/javascript.html">JavaScript</a>
+            </li>
+            <li class="menu-DOM">
+                <a href="../html/dom.html">DOM</a>
+            </li>
+            <li class="menu-ECMAScript">
+                <a href="../html/ecmascript.html">ECMAScript</a>
+            </li>
+            <li class="menu-functional">
+                <a href="../html/functional.html">Functional</a>
+            </li>
+            <li class="menu-Async">
+                <a href="../html/async.html">Async</a>
+            </li>
+            <li class="menu-SVG">
+                <a href="../html/svg.html">SVG</a>
+            </li>
+            <li class="menu-Vue">
+                <a href="../html/vue.html">Vue</a>
+            </li>
+            <li class="menu-php">
+                <a href="../html/php.html">PHP</a>
+            </li>
+            <li class="menu-Security">
+                <a href="../html/security.html">Security</a>
+            </li>
+        </ul>
+
+        <div class="menu-icon">
+            <div class="mi1"></div>
+            <div class="mi2"></div>
+            <div class="mi3"></div>
         </div>
     </nav>
-    <footer>
-        <p>Copyright 2021 Ziwo Tsajio Jimmy Dave</p>
-    </footer>
+    <article>
+        <section class="presentationcss">
 
+            <div class="css-inhalt">
+                <svg id="svglogo" width="345" height="124" viewBox="0 0 345 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M104.751 84.2661C101.474 90.5401 96.7508 95.3475 90.5363 98.7343C84.4469 102.012 77.014 103.709 68.1399 103.709C59.6614 103.709 52.1398 101.972 45.5191 98.5517C38.9067 95.1357 33.7523 90.3389 30.0054 84.1385C26.2758 77.8605 24.3736 70.5348 24.3736 62.0799C24.3736 53.5079 26.2804 46.1888 30.001 40.0288L30.0055 40.0213L30.01 40.0137C33.7599 33.7051 38.9144 28.8602 45.5191 25.4484C52.1398 22.0282 59.6614 20.291 68.1399 20.291C77.0052 20.291 84.4295 22.0374 90.5138 25.4133L90.5222 25.418L90.5307 25.4226C96.748 28.8095 101.473 33.6179 104.751 39.8938L105.453 41.2363H106.967H126.744H130.569L129.034 37.733C124.099 26.4711 116.229 17.7489 105.484 11.6221C94.7673 5.51121 82.2911 2.5 68.1399 2.5C56.0471 2.5 44.9506 5.02988 34.8957 10.1248L34.8957 10.1248L34.8843 10.1306C24.9508 15.2277 17.052 22.3457 11.2409 31.4721C5.40363 40.5324 2.5 50.7592 2.5 62.0799C2.5 73.4032 5.40488 83.6319 11.2447 92.6937C17.0578 101.714 24.9563 108.775 34.8843 113.869L34.8998 113.877L34.9153 113.885C44.9662 118.867 56.0557 121.34 68.1399 121.34C82.2835 121.34 94.7534 118.386 105.467 112.388L105.476 112.383L105.484 112.378C116.222 106.255 124.093 97.5913 129.03 86.4353L130.584 82.9236H126.744H106.967H105.453L104.751 84.2661ZM167.976 117.477L168 117.487L168.024 117.496C175.007 120.182 182.818 121.5 191.419 121.5C200.41 121.5 208.345 119.959 215.154 116.79C221.884 113.656 227.11 109.501 230.68 104.258C234.208 99.0763 236.012 93.4747 236.012 87.5021C236.012 80.0436 234.083 73.8472 229.942 69.2178C226.054 64.7674 221.369 61.4948 215.911 59.4295C210.681 57.3467 203.851 55.2924 195.461 53.2563C188.618 51.5635 183.323 50.0941 179.545 48.8477C176.119 47.5761 173.236 45.7917 170.856 43.5102C168.853 41.4825 167.792 38.8467 167.792 35.3787C167.792 30.484 169.621 26.8977 173.271 24.3065L173.287 24.2948L173.304 24.2829C177.124 21.4777 182.187 19.9712 188.697 19.9712C195.715 19.9712 201.069 21.5415 204.993 24.439L205.009 24.4506L205.025 24.4619C209.107 27.3785 211.14 30.5602 211.623 33.971L211.928 36.1199H214.099H232.242H235.038L234.727 33.3415C233.673 23.9379 228.953 16.3808 220.781 10.7772C212.754 5.19039 202.54 2.5 190.33 2.5C181.847 2.5 174.206 3.81931 167.45 6.51535L167.442 6.51841L167.435 6.52152C160.792 9.22332 155.499 13.1034 151.678 18.2124C147.834 23.3517 145.919 29.2645 145.919 35.8584C145.919 43.2115 147.787 49.3787 151.77 54.0989L151.793 54.1272L151.818 54.1548C155.704 58.4922 160.324 61.7077 165.66 63.772L165.67 63.7756L165.679 63.7792C170.905 65.753 177.737 67.7006 186.135 69.6314C192.868 71.2207 198.155 72.6898 202.03 74.035C205.708 75.3119 208.697 77.1494 211.06 79.5155C213.189 81.6481 214.32 84.4451 214.32 88.1417C214.32 92.7422 212.431 96.5058 208.408 99.5855C204.512 102.554 198.945 104.189 191.419 104.189C183.525 104.189 177.891 102.499 174.148 99.4897C170.379 96.2533 168.302 92.4 167.776 87.8541L167.519 85.6417H165.292H147.693H145.143L145.193 88.1914C145.325 94.8103 147.448 100.726 151.546 105.851L151.555 105.862L151.564 105.873C155.624 110.836 161.132 114.685 167.976 117.477ZM274.464 117.477L274.488 117.487L274.511 117.496C281.495 120.182 289.305 121.5 297.907 121.5C306.898 121.5 314.833 119.959 321.641 116.79C328.371 113.656 333.598 109.501 337.168 104.258C340.696 99.0763 342.5 93.4747 342.5 87.5021C342.5 80.0432 340.571 73.8466 336.429 69.2171C332.541 64.7671 327.856 61.4949 322.399 59.4297C317.169 57.3468 310.339 55.2924 301.949 53.2563C295.106 51.5635 289.81 50.0941 286.033 48.8477C282.607 47.5762 279.724 45.7916 277.344 43.5101C275.341 41.4824 274.28 38.8467 274.28 35.3787C274.28 30.484 276.108 26.8977 279.759 24.3065L279.775 24.2948L279.791 24.2829C283.611 21.4777 288.675 19.9712 295.185 19.9712C302.202 19.9712 307.557 21.5415 311.481 24.439L311.497 24.4506L311.513 24.4619C315.595 27.3785 317.627 30.5602 318.111 33.971L318.416 36.1199H320.586H338.73H341.526L341.214 33.3415C340.16 23.9379 335.44 16.3808 327.268 10.7772C319.242 5.19039 309.028 2.5 296.818 2.5C288.335 2.5 280.694 3.81931 273.938 6.51535L273.93 6.51841L273.922 6.52152C267.279 9.22332 261.987 13.1034 258.166 18.2124C254.322 23.3517 252.406 29.2645 252.406 35.8584C252.406 43.2115 254.274 49.3787 258.257 54.0989L258.281 54.1272L258.306 54.1548C262.192 58.4922 266.812 61.7077 272.148 63.772L272.157 63.7756L272.167 63.7792C277.393 65.753 284.225 67.7006 292.623 69.6314C299.355 71.2207 304.642 72.6898 308.517 74.035C312.196 75.3119 315.184 77.1494 317.547 79.5155C319.677 81.6481 320.808 84.4451 320.808 88.1417C320.808 92.7414 318.92 96.5044 314.898 99.5839C311.001 102.554 305.434 104.189 297.907 104.189C290.013 104.189 284.378 102.499 280.635 99.4895C276.867 96.2532 274.79 92.3999 274.263 87.8541L274.007 85.6417H271.78H254.18H251.63L251.681 88.1914C251.813 94.8102 253.936 100.726 258.034 105.851L258.043 105.862L258.051 105.873C262.111 110.836 267.62 114.685 274.464 117.477Z" stroke="#04A286" stroke-width="5"/>
+                </svg>
+
+            </div>
+
+            <div class="left-css1">
+
+                <div class="table">
+                    <ul>
+                        <li class="css-positionierung1">
+                            <button class="button1" onclick="document.getElementById('idpos1').style.display='block'"
+                                    style="width: auto;">Registrierung mit PHP</button>
+                            <div id="idpos1" class="csspos1">
+                                <div class="imgcontainer">
+                            <span onclick="document.getElementById('idpos1')
+                    .style.display='none'" class="close" title="Close Modal">&times;</span>
+                                    <iframe class="csspos1container animate" src="../übung/ubung12/ubung12.1/registphp.php"></iframe>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="css-positionierung2">
+                            <button class="button1"onclick="document.getElementById('idpos2').style.display='block'"
+                                    style="width: auto;">Login mit PHP</button>
+                            <div id="idpos2" class="csspos1">
+                                <div class="imgcontainer">
+                            <span onclick="document.getElementById('idpos2')
+                    .style.display='none'" class="close" title="Close Modal">&times;</span>
+                                    <iframe class="csspos1container animate" src="../übung/ubung12/übung12.2/login.php"></iframe>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-css1">
+                <iframe class="iframewwnav" src="../übung/ubung12/ubung12.3/wwwnavphp.php" title="übung WWW-Navigator "></iframe>
+                <p>Geschutze version der wwwNavigation finden sie im <strong>Login mit PHP </strong>bzw<a href='../übung/ubung12/übung12.2/login.php'>Hier</a></p>
+            </div>
+        </section>
+    </article>
+    <div id="AppFooter">
+        <my-footer></my-footer>
+    </div>
 </div>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
 </body>
 </html>

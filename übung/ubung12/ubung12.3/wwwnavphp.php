@@ -101,8 +101,8 @@
                         <select name="sub_header">
                         </select>
                         <select name="sub_header2">
-                            <option value="html">Content</option>
-                            <option value="css">References</option>
+                            <option value="content">Content</option>
+                            <option value="references">References</option>
                         </select>
                         <textarea name="content"></textarea>
                         <input type="submit" value="Submit">
@@ -158,9 +158,12 @@
     </div>
 
     <div class="ref">
-        <p>
-            <span id="Html_ref"> </span>
-        </p>
+        <button type="button" class="collapsible">REFERENCES</button>
+            <div class="collapcontent">
+            <p>
+                <span id="Html_ref"> </span>
+            </p>
+            <div>
         <p>
             <span id="pararef"> </span>
         </p>
@@ -187,28 +190,38 @@ $file = './data.json';
 $contents = file_get_contents( $file );
 $json = json_decode( $contents, true );
 
-if ( isset($_POST[ 'top_header' ]) && isset($_POST[ 'sub_header' ]) && isset($_POST[ 'content' ]) ){
+if ( isset($_POST[ 'top_header' ]) && isset($_POST[ 'sub_header' ]) && isset($_POST[ 'sub_header2' ]) && isset($_POST[ 'content' ]) ){
     $top_header = $_POST[ 'top_header' ];
     $sub_header = $_POST[ 'sub_header' ];
-//    $sub_header2 = $_POST[ 'sub_header2' ];
+    $sub_header2 = $_POST[ 'sub_header2' ];
     $content = $_POST[ 'content' ];
-    $json[ $top_header ][ $sub_header ][ 'content' ] = $content;
+    $json[ $top_header ][ $sub_header ][ $sub_header2 ] = $content;
     if ( file_put_contents( $file, json_encode( $json, true )) ){
         echo "<script>alert('Content is entered successfully!')</script>";
     }
-}else{
-    $top_header = $_POST[ 'top_header' ];
-    $sub_header = $_POST[ 'sub_header' ];
-//    $sub_header2 = $_POST[ 'sub_header2' ];
-    $content = $_POST[ 'content' ];
-    $json[ $top_header ][ $sub_header ][ 'references' ] = $content;
-    if ( file_put_contents( $file, json_encode( $json, true )) ){
-        echo "<script>alert('Content is entered successfully!')</script>";
-    }
+    echo $sub_header2;
 }
 ?>
 
 <script>
+    //Login
+    document.querySelector('button').addEventListener('click', e => {
+        fetch("../übung12.2/login.php", {
+            method: "POST",
+            body: new FormData(document.getElementById('login-form'))
+        }).then(function(res) {
+            if (res.ok) {
+                alert("Perfect! Your settings are saved.");
+            } else if (res.status === 401) {
+                alert("Oops! You are not authorized.");
+            }
+        }, function(e) {
+            alert("Error submitting form!");
+        });
+    });
+
+
+    //Jason
     let json = <?PHP echo json_encode( $json )?>;
     const top_header = document.querySelector('select[name="top_header"]');
     const sub_header = document.querySelector('select[name="sub_header"]');
@@ -227,8 +240,18 @@ if ( isset($_POST[ 'top_header' ]) && isset($_POST[ 'sub_header' ]) && isset($_P
         const response = await fetch(url);
         const data = await response.json();
 
-        document.getElementById('Htmlcontent').textContent=data['html']['headings']['h1'];
-        document.getElementById('parcontent').textContent=data['css']['selectors'];
+        document.getElementById('Htmlcontent').textContent=data['html']['headings']['content'];
+        document.getElementById('Html_ref').textContent=data['html']['headings']['references'];
+        document.getElementById('parcontent').textContent=data['html']['paragraph']['content'];
+        document.getElementById('pararef').textContent=data['html']['paragraph']['references'];
+        document.getElementById('seleccontent').textContent=data['css']['selectors']['content'];
+        document.getElementById('selecref').textContent=data['css']['selectors']['references'];
+        document.getElementById('colorcontent').textContent=data['css']['colors']['content'];
+        document.getElementById('colorref').textContent=data['css']['colors']['references'];
+        document.getElementById('funccontent').textContent=data['javascript']['function']['content'];
+        document.getElementById('funcref').textContent=data['javascript']['function']['references'];
+        document.getElementById('objectcontent').textContent=data['javascript']['object']['content'];
+        document.getElementById('objectref').textContent=data['javascript']['object']['references'];
 
     }
     getData();
