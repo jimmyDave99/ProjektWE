@@ -4,44 +4,112 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="../js/script.js" defer></script>
     <link rel="stylesheet" href="../css/style1.css">
-    <title>mein Webseite</title>
+    <link rel="stylesheet" href="../css/Css.css">
+    <link rel="stylesheet" href="../css/domcss.css">
+    <link rel="stylesheet" href="../css/javascript.css">
+    <!--    <script src="../js/script.js" defer></script>-->
+    <script src="../js/dom.js" defer></script>
+    <title>html</title>
+    <style>
+        .menu-html{
+            background-color: #04a286;
+        }
+        .menu-html:hover{
+            background-color: #04a286;
+        }
+        .iframewwnav{
+            height:700px;
+            width: 90%;
+            margin-left: 45px;
+            margin-right: 50px;
+            background-color: #57b2a5;
+        }
+        @media screen and (max-width: 1080px){
+            .menu-html{
+                width: 100%;
+                text-align: center;
+            }
+            svg{
+                width: 350px;
+            }
+        }
+    </style>
 </head>
 <body>
 <div class="gesamt">
-    <header>
-        <h1 class="headtitle1"><strong class="titleoben">HTML-CSS-JAVASCRIPT-PHP</strong><br>
-            <strong class="headtitle">Programierungsprache zur erstellung von Webseite</strong> </h1>
-    </header>
+    <div id="AppHeader">
+        <my-header></my-header>
+    </div>
     <nav>
-        <div class="table">
-            <ul>
-                <li class="menu-ind">
-                    <a href="index.html">Startseite</a>
-                </li>
-                <li class="menu-html">
-                    <a href="html.html">HTML</a>
-                </li>
-                <li class="menu-css">
-                    <a href="css.html">CSS</a>
-                </li>
-                <li class="menu-js">
-                    <a href="javascript.html">JavaScript</a>
-                </li>
-                <li class="menu-php">
-                    <a href="php.html">PHP</a>
-                </li>
-                <li class="menu-ubung">
-                    <a href="ubung.html">Übung</a>
-                </li>
-            </ul>
+        <div class="menu-home">
+            <a class="active" href="../index.html"><i class="fa fa-home"></i></a>
+        </div>
+
+        <ul class="topnav" id="topnav2">
+            <li class="menu-html">
+                <a href="html.html">HTML</a>
+            </li>
+            <li class="menu-css">
+                <a href="../html/css.html">CSS</a>
+            </li>
+            <li class="menu-js">
+                <a href="../html/javascript.html">JavaScript</a>
+            </li>
+            <li class="menu-DOM">
+                <a href="../html/dom.html">DOM</a>
+            </li>
+            <li class="menu-ECMAScript">
+                <a href="../html/ecmascript.html">ECMAScript</a>
+            </li>
+            <li class="menu-functional">
+                <a href="../html/functional.html">Functional</a>
+            </li>
+            <li class="menu-Async">
+                <a href="../html/async.html">Async</a>
+            </li>
+            <li class="menu-SVG">
+                <a href="../html/svg.html">SVG</a>
+            </li>
+            <li class="menu-Vue">
+                <a href="../html/vue.html">Vue</a>
+            </li>
+            <li class="menu-php">
+                <a href="../html/php.html">PHP</a>
+            </li>
+        </ul>
+
+        <div class="menu-icon">
+            <div class="mi1"></div>
+            <div class="mi2"></div>
+            <div class="mi3"></div>
         </div>
     </nav>
-    <footer>
-        <p>Copyright 2021 Ziwo Tsajio Jimmy Dave</p>
-    </footer>
+    <article>
+        <section class="presentationdom">
+
+            <div class="DOM-inhalt">
+                <svg id="svglogo" width="385" height="137" viewBox="0 0 385 137" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M59.444 5.08801V2.58801H56.944H48.208H45.708V5.08801V31.964H16.628V5.08801V2.58801H14.128H5.392H2.892V5.08801V72V74.5H5.392H14.128H16.628V72V44.164H45.708V72V74.5H48.208H56.944H59.444V72V5.08801ZM115.545 5.08801V2.58801H113.045H67.7327H65.2327V5.08801V12.192V14.692H67.7327H83.5687V72V74.5H86.0687H94.8047H97.3047V72V14.692H113.045H115.545V12.192V5.08801ZM194.17 5.56801V3.06801H191.67H182.358H180.738L180.076 4.54675L157.782 54.3601L135.488 4.54675L134.826 3.06801H133.206H123.798H121.298V5.56801V72V74.5H123.798H132.534H135.034V72V34.0916L152.428 73.0199L153.089 74.5H154.71H160.854H162.477L163.138 73.0178L180.434 34.2133V72V74.5H182.934H191.67H194.17V72V5.56801ZM241.146 64.896V62.396H238.646H217.722V5.08801V2.58801H215.222H206.486H203.986V5.08801V72V74.5H206.486H238.646H241.146V72V64.896Z" stroke="#04A286" stroke-width="5"/>
+                </svg>
+            </div>
+
+            <div class="ubung-dom">
+                <h2>HTML</h2>
+                <div class="table">
+                    <iframe class="iframewwnav" src="../übung/ubung1/htmlWireframe.html"></iframe>
+                </div>
+            </div>
+        </section>
+    </article>
+    <div id="AppFooter">
+        <my-footer></my-footer>
+    </div>
 
 </div>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
 </body>
 </html>

@@ -114,7 +114,7 @@ article li{
     list-style-type: none;
     /*float: left;*/
 }
-.titlejs, .titlecss, .titledom,.titleecm,.titlefunc, .titleasync, .titlesvg, .titlevue{
+.titlejs, .titlecss, .titledom,.titleecm,.titlefunc, .titleasync, .titlesvg, .titlevue,.titlephp{
     font-size: 30px;
     text-align: Center;
 }
@@ -131,9 +131,9 @@ article li{
     overflow: hidden;
 
 }
-.menu-js:hover,.menu-css:hover,.menu-home:hover,
+.menu-js:hover,.menu-css:hover,.menu-home:hover,.menu-html:hover,
 .menu-php:hover,.menu-DOM:hover,.menu-ECMAScript:hover,.menu-functional:hover,.menu-Async:hover,.menu-SVG:hover,
-.menu-Vue:hover,.menu-Security:hover{
+.menu-Vue:hover{
     /*border-top: 5px solid #008970;*/
     background-color: rgba(0,0,0,0.2);
 }
@@ -151,7 +151,7 @@ nav li:hover a{
     padding: 0;
     margin: 0;
     grid-template-columns: 50% 50% ;
-    grid-template-rows:800px 300px 300px 400px 400px 400px 400px 400px 400px;
+    grid-template-rows:800px 300px 300px 400px 400px 400px 400px 400px 400px 400px;
     background-color: #008970;
     /*height: 530px;*/
 }
@@ -257,7 +257,7 @@ nav li:hover a{
     margin-left: 50%;
     position: absolute;
 }
-.left-css,.left-js,.left-dom,.left-ecm,.left-func,.left-async,.left-svg,.left-vue{
+.left-css,.left-js,.left-dom,.left-ecm,.left-func,.left-async,.left-svg,.left-vue,.left-php{
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
@@ -266,6 +266,7 @@ nav li:hover a{
     background-color: #04a286;
     margin-left: 30px;
     margin-top: 20px;
+    overflow: hidden;
 }
 .right-css{
     grid-row-start: 2;
@@ -358,10 +359,22 @@ nav li:hover a{
     grid-column-start: 2;
     grid-column-end: 3;
 }
+.left-php{
+    grid-row-start: 10;
+    grid-row-end: 11;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.right-php{
+    grid-row-start: 10;
+    grid-row-end: 11;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
 p{
     margin-left: 30px;
 }
-.imgecm,.imgfunc,.imgasync, .imgsvg, .imgvue{
+.imgecm,.imgfunc,.imgasync, .imgsvg, .imgvue,.imgphp{
     display: block;
     margin-top: 50px;
     margin-left: 50px;
@@ -544,12 +557,6 @@ h2{
     }
 
 }
-/*@media screen and (max-width: 650px){*/
-/*    .headtitle1{*/
-/*        font-size: x-large;*/
-/*    }*/
-
-/*}*/
 @media screen and (max-width: 1530px){
     .headtitle1{
         font-size: x-large;
@@ -579,9 +586,9 @@ h2{
     body{
         overflow-x: hidden;
     }
-    .presentation1{
-        grid-template-rows:500px 300px 300px 400px 400px 400px 400px 400px 400px;
-    }
+    /*.presentation1{*/
+    /*    grid-template-rows:500px 300px 300px 400px 400px 400px 400px 400px 400px ;*/
+    /*}*/
     .buttonInfo{
         display: none;
     }
@@ -623,7 +630,7 @@ h2{
         width: 70%;
        height: 260px;
     }
-   .imgecm, .imgfunc, .imgasync,.imgvue{
+   .imgecm, .imgfunc, .imgasync,.imgvue,.imgphp{
        width: 70%;
        height: 250px;
    }
@@ -641,9 +648,9 @@ h2{
     .menu-home:hover{
         background-color: #64b4a6;
     }
-    .menu-js:hover,.menu-css:hover,.menu-home:hover,
+    .menu-js:hover,.menu-css:hover,.menu-home:hover,.menu-html,
     .menu-php:hover,.menu-DOM:hover,.menu-ECMAScript:hover,.menu-functional:hover,.menu-Async:hover,.menu-SVG:hover,
-    .menu-Vue:hover,.menu-Security:hover{
+    .menu-Vue:hover{
         /*border-top: 5px solid #008970;*/
         width: 100%;
         text-align: center;
