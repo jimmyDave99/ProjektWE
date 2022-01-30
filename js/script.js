@@ -10,7 +10,7 @@ new Vue({
 
 Vue.component('my-header',{
     template:'<header>\n' +
-        '        <!--source w-%20eng.png: https://www.canva.com/design/play?type=TAB7AVEOUWQ&category=tACZCvjI6mE&locale=de-DE&analyticsCorrelationId=f100a21f-df3b-48f9-ac1e-3cf4d18e9104-->\n' +
+        '        <!--w-%20eng.png selbe erstell in : https://www.canva.com/-->\n' +
         '       <a href="index.html" class="logoheader"><img src="../bilder/w-%20eng.png" alt="logo"></a>\n' +
         '        <a href="index.html"><h1 class="headtitle1"><strong class="titleoben">Web Engineering</strong><br>\n' +
         '            Darstellung von Übungsaufgaben </h1></a>\n' +
@@ -76,25 +76,6 @@ const navSlide = () => {
 
 }
 navSlide();
-
-//collapsible
-//
-// let collap = document.getElementsByClassName("collapsible");
-// let i;
-//
-// for (i = 0; i< collap.length; i++ ){
-//     collap[i].addEventListener("click", function () {
-//         this.classList.toggle("collactive");
-//         let content = this.nextElementSibling;
-//         if(content.style.display==="block"){
-//             content.style.display = "none";
-//         }else {
-//             content.style.display = "block";
-//         }
-//     });
-// }
-
-//Rolle wichtige sprache
 
 let kreis = document.getElementById("kreis");
 let oben = document.getElementById("oben");
